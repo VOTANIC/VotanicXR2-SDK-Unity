@@ -1,0 +1,29 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/Votanic/VXR2/Resources/UIToolkit/VXR2ProjectSettingsProvider.uss?fileID=7433441132597879392&amp;guid=b2c3d4e5f6478901a2b3c4d5e6f70819&amp;type=3#VXR2ProjectSettingsProvider" />
+    <ui:VisualElement name="root" class="vxr2-settings-root">
+        <ui:Label name="title-label" text="VotanicXR2" class="vxr2-settings-title" />
+        <ui:VisualElement name="scene-checks" class="vxr2-settings-section">
+            <ui:Label text="Scene Components" class="vxr2-settings-section-title" />
+            <ui:Label name="scene-name-label" class="vxr2-settings-status" />
+            <ui:Toggle name="check-world-fader" label="World Fader" class="vxr2-settings-check" />
+            <ui:Toggle name="check-vxr-input-manager" label="VXRInputManager" class="vxr2-settings-check" />
+            <ui:Toggle name="check-vxr-object-manager" label="VXRObjectManager" class="vxr2-settings-check" />
+            <ui:Toggle name="check-vxr-launcher-cmd-handler" label="VXRLauncherCmdHandler" class="vxr2-settings-check" />
+            <ui:Button name="refresh-scene-checks-button" text="Refresh Scene Checks" class="vxr2-settings-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="rp-checks" class="vxr2-settings-section">
+            <ui:Label text="Rendering" class="vxr2-settings-section-title" />
+            <ui:Button name="apply-rp-asset-button" text="Use Votanic VXR2 Render Pipeline Asset" class="vxr2-settings-button" />
+            <ui:Label name="apply-rp-status-label" class="vxr2-settings-status" />
+        </ui:VisualElement>
+        <ui:VisualElement name="dxgi-checks" class="vxr2-settings-section">
+            <ui:Label text="DXGI Setting" name="Label" class="vxr2-settings-section-title" />
+            <ui:Button name="disable-dxgi-button" text="Disable DXGI" class="vxr2-settings-button" />
+            <ui:Label name="disable-dxgi-status-label" class="vxr2-settings-status" />
+        </ui:VisualElement>
+        <ui:VisualElement name="build-profiles" class="vxr2-settings-section">
+            <ui:Label text="Player Build Profiles" class="vxr2-settings-section-title" />
+            <ui:VisualElement name="build-profiles-list" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

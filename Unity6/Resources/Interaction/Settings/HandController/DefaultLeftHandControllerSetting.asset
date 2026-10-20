@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 459567104, guid: 13b4b57f3f6453f4d9a49bbf40af8c41, type: 3}
+  m_Name: DefaultLeftHandControllerSetting
+  m_EditorClassIdentifier: 
+  VisualPrefab: {fileID: 5531802531502424540, guid: 815621820f750cf4db10e9d3fc0b6d88, type: 3}
+  InteractorSettings:
+  - {fileID: 11400000, guid: 489dd8f81c7351942b135b90359225a6, type: 2}
+  - {fileID: 11400000, guid: e42c28014f9e5174d83809e6a2d49420, type: 2}
+  - {fileID: 11400000, guid: 2e2a025c35d942e448d5704e2fda63e4, type: 2}

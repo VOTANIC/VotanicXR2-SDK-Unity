@@ -1,0 +1,502 @@
+/* Main Container */
+#main-container {
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+/* Toolbar */
+#toolbar-container {
+    background-color: rgb(60, 60, 60);
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(35, 35, 35);
+    min-height: 30px;
+}
+
+#toolbar {
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 8px;
+    min-height: 30px;
+    overflow: hidden;
+}
+
+#file-path-label {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -unity-text-align: middle-left;
+    font-size: 12px;
+    color: rgb(200, 200, 200);
+}
+
+.toolbar-button {
+    min-width: 60px;
+    flex-shrink: 0;
+    margin-right: 4px;
+}
+
+#save-as-button {
+    min-width: 70px;
+}
+
+.toolbar-spacer {
+    flex-grow: 1;
+}
+
+/* Content Container (Split View) */
+#content-container {
+    flex-grow: 1;
+}
+
+/* Left Panel - Tree View */
+#left-panel {
+    background-color: rgb(56, 56, 56);
+    min-width: 200px;
+    flex-grow: 1;
+}
+
+#tree-view-root {
+    flex-grow: 1;
+}
+
+.tree-header-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(25, 25, 25);
+}
+
+.tree-title {
+    -unity-font-style: bold;
+    flex-shrink: 0;
+}
+
+.tree-add-action-button {
+    background-color: rgb(58, 121, 187);
+    color: rgb(255, 255, 255);
+    border-width: 0;
+    padding: 4px 12px;
+    border-radius: 3px;
+    margin-left: 8px;
+    flex-shrink: 0;
+    -unity-font-style: bold;
+}
+
+.tree-add-action-button:hover {
+    background-color: rgb(70, 133, 199);
+}
+
+.tree-add-action-button:active {
+    background-color: rgb(46, 109, 175);
+}
+
+.tree-search-container {
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 12px;
+}
+
+.tree-search-icon {
+    font-size: 16px;
+    margin-right: 4px;
+    color: rgb(150, 150, 150);
+    -unity-text-align: middle-center;
+}
+
+.tree-search-field {
+    flex-grow: 1;
+}
+
+.tree-search-field > .unity-text-field__input {
+    background-color: rgb(60, 60, 60);
+    border-color: rgb(35, 35, 35);
+    border-width: 1px;
+    border-radius: 3px;
+    padding: 4px 6px;
+    font-size: 12px;
+    color: rgb(210, 210, 210);
+}
+
+.tree-search-field > .unity-text-field__input:focus {
+    border-color: rgb(80, 120, 160);
+}
+
+.tree-search-placeholder {
+    position: absolute;
+    left: 6px;
+    top: 4px;
+    color: rgb(120, 120, 120);
+    font-size: 12px;
+    -unity-text-align: middle-left;
+}
+
+.tree-search-clear-button {
+    min-width: 20px;
+    max-width: 20px;
+    min-height: 20px;
+    max-height: 20px;
+    margin-left: 4px;
+    padding: 0;
+    -unity-text-align: middle-center;
+    font-size: 16px;
+    background-color: rgb(80, 80, 80);
+    border-radius: 3px;
+}
+
+.tree-search-clear-button:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+.tree-scroll {
+    flex-grow: 1;
+}
+
+#tree-container {
+    padding: 4px;
+}
+
+.tree-item-container {
+    flex-direction: row;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tree-item-icon {
+    min-width: 22px;
+    max-width: 22px;
+    -unity-text-align: middle-center;
+    font-size: 14px;
+}
+
+.tree-item-label {
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 50px;
+}
+
+.tree-add-button {
+    min-width: 20px;
+    max-width: 20px;
+    min-height: 16px;
+    max-height: 16px;
+    margin-right: 4px;
+    padding: 0;
+    -unity-text-align: middle-center;
+    font-size: 16px;
+}
+
+.tree-delete-button {
+    min-width: 20px;
+    max-width: 20px;
+    min-height: 16px;
+    max-height: 16px;
+    margin-left: 2px;
+    padding: 0;
+    -unity-text-align: middle-center;
+    font-size: 18px;
+}
+
+.tree-button-green {
+    background-color: rgb(40, 120, 40);
+    border-color: rgb(30, 100, 30);
+}
+
+.tree-button-green:hover {
+    background-color: rgb(50, 140, 50);
+}
+
+.tree-button-red {
+    background-color: rgb(140, 40, 40);
+    border-color: rgb(120, 30, 30);
+}
+
+.tree-button-red:hover {
+    background-color: rgb(160, 50, 50);
+}
+
+.tree-toggle-button {
+    min-width: 20px;
+    max-width: 20px;
+    min-height: 16px;
+    max-height: 16px;
+    margin-right: 4px;
+    padding: 0;
+    -unity-text-align: middle-center;
+    font-size: 12px;
+}
+
+.tree-button-container-right {
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.tree-reorder-button {
+    min-width: 18px;
+    max-width: 18px;
+    min-height: 16px;
+    max-height: 16px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 0;
+    -unity-text-align: middle-center;
+    font-size: 14px;
+}
+
+.tree-button-disabled {
+    opacity: 0.3;
+}
+
+.tree-item-selected {
+    background-color: rgba(77, 77, 77, 0.3);
+}
+
+.tree-item-hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Right Panel - Detail View */
+#right-panel {
+    flex-grow: 1;
+    background-color: rgb(50, 50, 50);
+    min-width: 300px;
+}
+
+#detail-panel-root {
+    flex-grow: 1;
+}
+
+.detail-title {
+    -unity-font-style: bold;
+    padding: 8px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(25, 25, 25);
+}
+
+.detail-scroll {
+    flex-grow: 1;
+}
+
+#detail-content {
+    padding: 8px;
+}
+
+.detail-empty-label {
+    -unity-text-align: middle-center;
+    margin-top: 50px;
+    color: rgb(153, 153, 153);
+}
+
+.detail-separator {
+    height: 1px;
+    background-color: rgb(77, 77, 77);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.detail-section-label {
+    color: rgb(179, 179, 179);
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+
+.detail-section-header {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+/* Buttons */
+Button {
+    background-color: rgb(70, 70, 70);
+    border-color: rgb(35, 35, 35);
+    border-width: 1px;
+    border-radius: 3px;
+    padding: 4px 8px;
+    color: rgb(210, 210, 210);
+}
+
+Button:hover {
+    background-color: rgb(80, 80, 80);
+}
+
+Button:active {
+    background-color: rgb(60, 60, 60);
+}
+
+/* Text Fields */
+TextField {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+TextField > Label {
+    min-width: 120px;
+    color: rgb(200, 200, 200);
+}
+
+TextField > TextInput {
+    background-color: rgb(42, 42, 42);
+    border-color: rgb(35, 35, 35);
+    border-width: 1px;
+    border-radius: 3px;
+    padding: 4px;
+    color: rgb(220, 220, 220);
+}
+
+/* Enum Fields */
+EnumField {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+EnumField > Label {
+    min-width: 120px;
+    color: rgb(200, 200, 200);
+}
+
+/* Tree Item Styling */
+.tree-item {
+    padding: 4px;
+    border-radius: 3px;
+}
+
+.tree-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tree-item-selected {
+    background-color: rgba(58, 121, 187, 0.5);
+}
+
+/* Separators */
+.separator {
+    height: 1px;
+    background-color: rgb(77, 77, 77);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Info Labels */
+.info-label {
+    font-size: 11px;
+    color: rgb(180, 180, 180);
+    margin-top: 2px;
+}
+
+/* Control Scheme Container */
+.control-scheme-container {
+    margin-left: 10px;
+    margin-top: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-left-width: 2px;
+    border-left-color: rgb(128, 179, 230);
+    background-color: rgba(51, 51, 51, 0.3);
+}
+
+.control-scheme-header-row {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.control-scheme-label {
+    -unity-font-style: bold;
+}
+
+.control-scheme-button-container {
+    flex-direction: row;
+}
+
+.control-scheme-change-button {
+    width: 60px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.control-scheme-clear-button {
+    width: 50px;
+    height: 20px;
+}
+
+/* Interaction/Processor Container */
+.interaction-container, .processor-container {
+    margin-left: 10px;
+    margin-top: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-left-width: 2px;
+    border-left-color: rgb(179, 128, 230);
+    background-color: rgba(51, 51, 51, 0.3);
+}
+
+.interaction-header-row, .processor-header-row {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.interaction-name-label, .processor-name-label {
+    -unity-font-style: bold;
+    color: rgb(200, 200, 200);
+}
+
+.interaction-button-container, .processor-button-container {
+    flex-direction: row;
+}
+
+.interaction-move-button, .processor-move-button {
+    width: 25px;
+    height: 20px;
+    margin-right: 2px;
+}
+
+.interaction-remove-button, .processor-remove-button {
+    width: 60px;
+    height: 20px;
+}
+
+.interaction-params-container, .processor-params-container {
+    margin-top: 5px;
+    padding-left: 10px;
+}
+
+.param-container {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.param-label {
+    min-width: 100px;
+    color: rgb(180, 180, 180);
+}
+
+.param-field {
+    flex-grow: 1;
+    margin-right: 5px;
+}
+
+.param-slider {
+    width: 80px;
+}
+
+.manage-button {
+    width: 60px;
+    height: 20px;
+}
