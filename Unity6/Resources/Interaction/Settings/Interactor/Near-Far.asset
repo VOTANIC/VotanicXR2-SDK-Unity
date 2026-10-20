@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1569525919, guid: 13b4b57f3f6453f4d9a49bbf40af8c41, type: 3}
+  m_Name: Near-Far
+  m_EditorClassIdentifier: 
+  InteractorPrefab: {fileID: 6398700030876032452, guid: 7fd1ff4699fdd264bb90162296760315, type: 3}
+  EnableOnStart: 1
+  EnableBaseInput: 1
+  EnableUIInput: 1

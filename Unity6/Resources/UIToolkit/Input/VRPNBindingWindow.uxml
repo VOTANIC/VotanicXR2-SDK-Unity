@@ -1,0 +1,27 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/Scripts/Input/Editor/VRPNBindingWindow.uss?fileID=7433441132597879392&amp;guid=72151dac438a6eb47974635a817eaf3c&amp;type=3#VRPNBindingWindow" />
+    <ui:VisualElement name="root" class="root-container">
+        <ui:Label name="title-label" class="title-label" />
+        <ui:Label text="Configure the VRPN binding parameters:" class="description-label" />
+        <ui:VisualElement class="input-row">
+            <ui:Label text="IP Address:" class="input-label" />
+            <ui:TextField name="ip-field" class="input-field" />
+        </ui:VisualElement>
+        <ui:VisualElement class="input-row">
+            <ui:Label text="Tracker Name:" class="input-label" />
+            <ui:TextField name="tracker-field" class="input-field" />
+        </ui:VisualElement>
+        <ui:VisualElement class="input-row">
+            <ui:Label text="Channel:" class="input-label" />
+            <uie:IntegerField name="channel-field" class="input-field" />
+        </ui:VisualElement>
+        <ui:VisualElement name="preview-container" class="preview-container">
+            <ui:Label text="Binding Path Preview:" class="preview-title" />
+            <ui:Label name="preview-path" class="preview-path" />
+        </ui:VisualElement>
+        <ui:VisualElement class="button-container">
+            <ui:Button name="cancel-button" text="Cancel" class="dialog-button" />
+            <ui:Button name="create-button" text="Create" class="dialog-button primary-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

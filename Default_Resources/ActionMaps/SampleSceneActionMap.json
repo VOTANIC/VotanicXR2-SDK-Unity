@@ -1,0 +1,690 @@
+{
+    "actions": [
+        {
+            "name": "Movement",
+            "actionType": 0,
+            "valueType": 2,
+            "bindings": [
+                {
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "WASD",
+                    "controlScheme": "PC",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "up",
+                    "controlScheme": "PC",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "down",
+                    "controlScheme": "PC",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "left",
+                    "controlScheme": "PC",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "right",
+                    "controlScheme": "PC",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Gamepad Left Stick",
+                    "controlScheme": "PC,CAVE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<XRController>{LeftHand}/primary2DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "VR Left Joystick",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "Vertical",
+            "actionType": 0,
+            "valueType": 1,
+            "bindings": [
+                {
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Space/Ctrl",
+                    "controlScheme": "PC",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "positive",
+                    "controlScheme": "PC",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "negative",
+                    "controlScheme": "PC",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "path": "<Gamepad>/rightstick/y",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Gamepad Right Stick Y",
+                    "controlScheme": "CAVE,PC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<XRController>{RightHand}/primary2DAxis/y",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "VR Right Joystick Y",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "RightGrabMove",
+            "actionType": 0,
+            "valueType": 0,
+            "bindings": [
+                {
+                    "path": "<Keyboard>/g",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Keyboard G",
+                    "controlScheme": "PC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Gamepad B Button",
+                    "controlScheme": "PC,CAVE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<XRController>{RightHand}/grip",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "VR Right Grip",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "LeftGrabMove",
+            "actionType": 0,
+            "valueType": 0,
+            "bindings": [
+                {
+                    "path": "<XRController>{LeftHand}/grip",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "VR Left Grip",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "Turn",
+            "actionType": 0,
+            "valueType": 2,
+            "bindings": [
+                {
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "scale(x=0.1,y=0)",
+                    "name": "Mouse Look X",
+                    "controlScheme": "PC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Gamepad Right Stick",
+                    "controlScheme": "PC,CAVE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "SnapTurn",
+            "actionType": 0,
+            "valueType": 2,
+            "bindings": [
+                {
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Q/E Keys",
+                    "controlScheme": "PC",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "up",
+                    "controlScheme": "",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "down",
+                    "controlScheme": "",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "left",
+                    "controlScheme": "",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "right",
+                    "controlScheme": "",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "path": "<Gamepad>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Gamepad D-pad",
+                    "controlScheme": "PC,CAVE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<XRController>{RightHand}/primary2DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "VR Right Joystick",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "Menu",
+            "actionType": 0,
+            "valueType": 0,
+            "bindings": [
+                {
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Keyboard M",
+                    "controlScheme": "PC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Gamepad Y Button",
+                    "controlScheme": "PC,CAVE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "VR Right A Button",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "VR Left X Button",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "HeadIsTracked",
+            "actionType": 1,
+            "valueType": 0,
+            "bindings": [
+                {
+                    "path": "<VRPN>/localhost/HeadTracker/0/isTracking",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "VRPN Head IsTracking",
+                    "controlScheme": "CAVE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<XRHMD>/isTracked",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "XRController",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "HeadPosition",
+            "actionType": 0,
+            "valueType": 3,
+            "bindings": [
+                {
+                    "path": "<VRPN>/localhost/HeadTracker/0/position",
+                    "interactions": "",
+                    "processors": "invert(y=false,z=false)",
+                    "name": "VRPN Position",
+                    "controlScheme": "CAVE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<XRHMD>/centerEyePosition",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "HMD Position",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "HeadRotation",
+            "actionType": 0,
+            "valueType": 4,
+            "bindings": [
+                {
+                    "path": "<VRPN>/localhost/HeadTracker/0/rotation",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "VRPN Rotation",
+                    "controlScheme": "CAVE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<XRHMD>/deviceRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "HMD Rotation",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "RightHandIsTracked",
+            "actionType": 1,
+            "valueType": 0,
+            "bindings": [
+                {
+                    "path": "<Mouse>/isTracked",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "MouseIsTracked",
+                    "controlScheme": "PC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<VRPN>/localhost/WandTracker/0/isTracking",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "VRPN Wand IsTracking",
+                    "controlScheme": "CAVE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<XRController>{RightHand}/isTracked",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "XRControllerIsTracked",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "RightHandPosition",
+            "actionType": 1,
+            "valueType": 3,
+            "bindings": [
+                {
+                    "path": "<Constant>/Vector3",
+                    "interactions": "",
+                    "processors": "offset(y=1.2, z=0.4)",
+                    "name": "PC Default Pos",
+                    "controlScheme": "PC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<VRPN>/localhost/WandTracker/0/position",
+                    "interactions": "",
+                    "processors": "invert(y=false,z=false)",
+                    "name": "VRPN Wand Position",
+                    "controlScheme": "CAVE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<XRController>{RightHand}/devicePosition",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Right Controller Position",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "RightHandRotation",
+            "actionType": 1,
+            "valueType": 4,
+            "bindings": [
+                {
+                    "path": "LookRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Mouse Movement",
+                    "controlScheme": "PC",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "scale(x=0, y=0.1), invert(y=true)",
+                    "name": "delta",
+                    "controlScheme": "",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "path": "<VRPN>/localhost/WandTracker/0/rotation",
+                    "interactions": "",
+                    "processors": "invert(y=false,z=false)",
+                    "name": "VRPN Wand Rotation",
+                    "controlScheme": "CAVE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<XRController>{RightHand}/deviceRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Right Controller Rotation",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "RightHandSelect",
+            "actionType": 0,
+            "valueType": 0,
+            "bindings": [
+                {
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Keyboard Space",
+                    "controlScheme": "PC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Gamepad A Button",
+                    "controlScheme": "PC,CAVE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<XRController>{RightHand}/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "VR Right Trigger",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "RightHandUIPress",
+            "actionType": 0,
+            "valueType": 0,
+            "bindings": [
+                {
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Keyboard Space",
+                    "controlScheme": "PC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Gamepad A Button",
+                    "controlScheme": "PC,CAVE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "path": "<XRController>{RightHand}/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "VR Right Trigger",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "LeftHandIsTracked",
+            "actionType": 1,
+            "valueType": 0,
+            "bindings": [
+                {
+                    "path": "<XRController>{LeftHand}/isTracked",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "XRControllerIsTracked",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "LeftHandPosition",
+            "actionType": 1,
+            "valueType": 3,
+            "bindings": [
+                {
+                    "path": "<XRController>{LeftHand}/devicePosition",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Left Controller Position",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "LeftHandRotation",
+            "actionType": 1,
+            "valueType": 4,
+            "bindings": [
+                {
+                    "path": "<XRController>{LeftHand}/deviceRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Left Controller Rotation",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "LeftHandSelect",
+            "actionType": 0,
+            "valueType": 0,
+            "bindings": [
+                {
+                    "path": "<XRController>{LeftHand}/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "VR Left Trigger",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "LeftHandUIPress",
+            "actionType": 0,
+            "valueType": 0,
+            "bindings": [
+                {
+                    "path": "<XRController>{LeftHand}/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "VR Left Trigger",
+                    "controlScheme": "HMD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        },
+        {
+            "name": "NextInteractor",
+            "actionType": 0,
+            "valueType": 0,
+            "bindings": [
+                {
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "name": "Gamepad X",
+                    "controlScheme": "PC,CAVE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ],
+            "enabled": true
+        }
+    ],
+    "controlSchemes": [
+        "PC",
+        "HMD",
+        "CAVE"
+    ]
+}
