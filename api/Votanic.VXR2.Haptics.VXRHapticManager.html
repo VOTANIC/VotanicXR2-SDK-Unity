@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class VXRHapticManager | VotanicXR2 Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class VXRHapticManager | VotanicXR2 Documentation ">
+      
+      <meta name="description" content="Manages haptic feedback for common controllers used by VXR Input Manager.  Support xInput gamepads and VR controllers.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VOTANIC/VotanicXR2_New/new/master/apiSpec/new?filename=Votanic_VXR2_Haptics_VXRHapticManager.md&amp;value=---%0Auid%3A%20Votanic.VXR2.Haptics.VXRHapticManager%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="VotanicXR2 Documentation">
+            VotanicXR2 Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Votanic.VXR2.Haptics.VXRHapticManager">
+
+
+
+  <h1 id="Votanic_VXR2_Haptics_VXRHapticManager" data-uid="Votanic.VXR2.Haptics.VXRHapticManager" class="text-break">
+Class VXRHapticManager  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Haptics/VXRHapticManager.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Votanic.html">Votanic</a>.<a class="xref" href="Votanic.VXR2.html">VXR2</a>.<a class="xref" href="Votanic.VXR2.Haptics.html">Haptics</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Manages haptic feedback for common controllers used by VXR Input Manager. <br>
+Support xInput gamepads and VR controllers.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class VXRHapticManager : MonoBehaviour</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">VXRHapticManager</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Votanic_VXR2_Haptics_VXRHapticManager_ImpulseDuration_" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.ImpulseDuration*"></a>
+
+  <h3 id="Votanic_VXR2_Haptics_VXRHapticManager_ImpulseDuration" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.ImpulseDuration">
+  ImpulseDuration
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Haptics/VXRHapticManager.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Duration in seconds of a single haptic impulse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ImpulseDuration { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Haptics_VXRHapticManager_Instance_" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.Instance*"></a>
+
+  <h3 id="Votanic_VXR2_Haptics_VXRHapticManager_Instance" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.Instance">
+  Instance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Haptics/VXRHapticManager.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Singleton instance. Created on first access if none exists in the scene.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VXRHapticManager Instance { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.html">VXRHapticManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Haptics_VXRHapticManager_StrongHapticAmplitude_" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.StrongHapticAmplitude*"></a>
+
+  <h3 id="Votanic_VXR2_Haptics_VXRHapticManager_StrongHapticAmplitude" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.StrongHapticAmplitude">
+  StrongHapticAmplitude
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Haptics/VXRHapticManager.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Amplitude used for <a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.HapticStrength.html#Votanic_VXR2_Haptics_VXRHapticManager_HapticStrength_Strong">Strong</a> impulses, in the range [0, 1].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float StrongHapticAmplitude { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Haptics_VXRHapticManager_WeakHapticAmplitude_" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.WeakHapticAmplitude*"></a>
+
+  <h3 id="Votanic_VXR2_Haptics_VXRHapticManager_WeakHapticAmplitude" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.WeakHapticAmplitude">
+  WeakHapticAmplitude
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Haptics/VXRHapticManager.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Amplitude used for <a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.HapticStrength.html#Votanic_VXR2_Haptics_VXRHapticManager_HapticStrength_Weak">Weak</a> impulses, in the range [0, 1].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float WeakHapticAmplitude { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Votanic_VXR2_Haptics_VXRHapticManager_SendGamepadHaptic_" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.SendGamepadHaptic*"></a>
+
+  <h3 id="Votanic_VXR2_Haptics_VXRHapticManager_SendGamepadHaptic_System_Int32_System_Single_System_Single_" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.SendGamepadHaptic(System.Int32,System.Single,System.Single)">
+  SendGamepadHaptic(int, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Haptics/VXRHapticManager.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends a haptic impulse to an XInput gamepad using the same amplitude for both motors.
+Any active haptic on the same controller index is stopped before the new impulse starts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SendGamepadHaptic(int controllerIndex, float amplitude, float duration)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controllerIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Zero-based gamepad index (0–3).</p>
+</dd>
+    <dt><code>amplitude</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Motor amplitude from 0 to 1.</p>
+</dd>
+    <dt><code>duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Duration of the impulse in seconds.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Haptics_VXRHapticManager_SendGamepadHaptic_" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.SendGamepadHaptic*"></a>
+
+  <h3 id="Votanic_VXR2_Haptics_VXRHapticManager_SendGamepadHaptic_System_Int32_System_Single_System_Single_System_Single_" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.SendGamepadHaptic(System.Int32,System.Single,System.Single,System.Single)">
+  SendGamepadHaptic(int, float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Haptics/VXRHapticManager.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends a haptic impulse to an XInput gamepad with independent left and right motor amplitudes.
+Any active haptic on the same controller index is stopped before the new impulse starts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SendGamepadHaptic(int controllerIndex, float leftAmplitude, float rightAmplitude, float duration)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controllerIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Zero-based gamepad index (0–3).</p>
+</dd>
+    <dt><code>leftAmplitude</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Left motor amplitude from 0 to 1.</p>
+</dd>
+    <dt><code>rightAmplitude</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Right motor amplitude from 0 to 1.</p>
+</dd>
+    <dt><code>duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Duration of the impulse in seconds.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Haptics_VXRHapticManager_SendGamepadHaptic_" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.SendGamepadHaptic*"></a>
+
+  <h3 id="Votanic_VXR2_Haptics_VXRHapticManager_SendGamepadHaptic_System_Int32_Votanic_VXR2_Haptics_VXRHapticManager_HapticStrength_" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.SendGamepadHaptic(System.Int32,Votanic.VXR2.Haptics.VXRHapticManager.HapticStrength)">
+  SendGamepadHaptic(int, HapticStrength)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Haptics/VXRHapticManager.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends a short haptic impulse to an XInput gamepad using a preset <a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.HapticStrength.html">VXRHapticManager.HapticStrength</a>
+and the default <a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.html#Votanic_VXR2_Haptics_VXRHapticManager_ImpulseDuration">ImpulseDuration</a>.
+Any active haptic on the same controller index is stopped before the new impulse starts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SendGamepadHaptic(int controllerIndex, VXRHapticManager.HapticStrength strength)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controllerIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Zero-based gamepad index (0–3).</p>
+</dd>
+    <dt><code>strength</code> <a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.html">VXRHapticManager</a>.<a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.HapticStrength.html">HapticStrength</a></dt>
+    <dd><p>Preset vibration strength.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Haptics_VXRHapticManager_SendGamepadHaptic_" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.SendGamepadHaptic*"></a>
+
+  <h3 id="Votanic_VXR2_Haptics_VXRHapticManager_SendGamepadHaptic_System_Int32_Votanic_VXR2_Haptics_VXRHapticManager_HapticStrength_System_Single_" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.SendGamepadHaptic(System.Int32,Votanic.VXR2.Haptics.VXRHapticManager.HapticStrength,System.Single)">
+  SendGamepadHaptic(int, HapticStrength, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Haptics/VXRHapticManager.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends a haptic impulse to an XInput gamepad using a preset <a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.HapticStrength.html">VXRHapticManager.HapticStrength</a>.
+Any active haptic on the same controller index is stopped before the new impulse starts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SendGamepadHaptic(int controllerIndex, VXRHapticManager.HapticStrength strength, float duration)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controllerIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Zero-based gamepad index (0–3).</p>
+</dd>
+    <dt><code>strength</code> <a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.html">VXRHapticManager</a>.<a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.HapticStrength.html">HapticStrength</a></dt>
+    <dd><p>Preset vibration strength.</p>
+</dd>
+    <dt><code>duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Duration of the impulse in seconds.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Haptics_VXRHapticManager_SendVRHaptic_" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.SendVRHaptic*"></a>
+
+  <h3 id="Votanic_VXR2_Haptics_VXRHapticManager_SendVRHaptic_Votanic_VXR2_Haptics_VXRHapticManager_VRHapticHand_System_Single_System_Single_" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.SendVRHaptic(Votanic.VXR2.Haptics.VXRHapticManager.VRHapticHand,System.Single,System.Single)">
+  SendVRHaptic(VRHapticHand, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Haptics/VXRHapticManager.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends a haptic impulse to one or both VR controllers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SendVRHaptic(VXRHapticManager.VRHapticHand hand, float amplitude, float duration)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hand</code> <a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.html">VXRHapticManager</a>.<a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.VRHapticHand.html">VRHapticHand</a></dt>
+    <dd><p>The hand or hands to receive haptic feedback.</p>
+</dd>
+    <dt><code>amplitude</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Haptic amplitude from 0 to 1.</p>
+</dd>
+    <dt><code>duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Duration of the impulse in seconds.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Haptics_VXRHapticManager_SendVRHaptic_" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.SendVRHaptic*"></a>
+
+  <h3 id="Votanic_VXR2_Haptics_VXRHapticManager_SendVRHaptic_Votanic_VXR2_Haptics_VXRHapticManager_VRHapticHand_Votanic_VXR2_Haptics_VXRHapticManager_HapticStrength_" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.SendVRHaptic(Votanic.VXR2.Haptics.VXRHapticManager.VRHapticHand,Votanic.VXR2.Haptics.VXRHapticManager.HapticStrength)">
+  SendVRHaptic(VRHapticHand, HapticStrength)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Haptics/VXRHapticManager.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends a short haptic impulse to one or both VR controllers using a preset <a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.HapticStrength.html">VXRHapticManager.HapticStrength</a>
+and the default <a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.html#Votanic_VXR2_Haptics_VXRHapticManager_ImpulseDuration">ImpulseDuration</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SendVRHaptic(VXRHapticManager.VRHapticHand hand, VXRHapticManager.HapticStrength strength)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hand</code> <a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.html">VXRHapticManager</a>.<a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.VRHapticHand.html">VRHapticHand</a></dt>
+    <dd><p>The hand or hands to receive haptic feedback.</p>
+</dd>
+    <dt><code>strength</code> <a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.html">VXRHapticManager</a>.<a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.HapticStrength.html">HapticStrength</a></dt>
+    <dd><p>Preset vibration strength.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Haptics_VXRHapticManager_SendVRHaptic_" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.SendVRHaptic*"></a>
+
+  <h3 id="Votanic_VXR2_Haptics_VXRHapticManager_SendVRHaptic_Votanic_VXR2_Haptics_VXRHapticManager_VRHapticHand_Votanic_VXR2_Haptics_VXRHapticManager_HapticStrength_System_Single_" data-uid="Votanic.VXR2.Haptics.VXRHapticManager.SendVRHaptic(Votanic.VXR2.Haptics.VXRHapticManager.VRHapticHand,Votanic.VXR2.Haptics.VXRHapticManager.HapticStrength,System.Single)">
+  SendVRHaptic(VRHapticHand, HapticStrength, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Haptics/VXRHapticManager.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends a haptic impulse to one or both VR controllers using a preset <a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.HapticStrength.html">VXRHapticManager.HapticStrength</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SendVRHaptic(VXRHapticManager.VRHapticHand hand, VXRHapticManager.HapticStrength strength, float duration)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hand</code> <a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.html">VXRHapticManager</a>.<a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.VRHapticHand.html">VRHapticHand</a></dt>
+    <dd><p>The hand or hands to receive haptic feedback.</p>
+</dd>
+    <dt><code>strength</code> <a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.html">VXRHapticManager</a>.<a class="xref" href="Votanic.VXR2.Haptics.VXRHapticManager.HapticStrength.html">HapticStrength</a></dt>
+    <dd><p>Preset vibration strength.</p>
+</dd>
+    <dt><code>duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Duration of the impulse in seconds.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Haptics/VXRHapticManager.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

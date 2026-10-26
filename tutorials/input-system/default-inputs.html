@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Default Inputs | VotanicXR2 Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Default Inputs | VotanicXR2 Documentation ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VOTANIC/VotanicXR2_Tutorial_Documentation_Source/blob/main/tutorials/input-system/default-inputs.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="VotanicXR2 Documentation">
+            VotanicXR2 Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="default-inputs">
+
+
+<div class="WARNING">
+<h5>Warning</h5>
+<p><strong>To be done</strong></p>
+<ul>
+<li>Input mapping is not finalized</li>
+</ul>
+</div>
+<h1 id="default-input-mappings">Default input mappings</h1>
+<p>This page describes the default input mappings (located under <code>StreamingAssets/InputActionMaps/DefaultActionMap.json</code>) used by VotanicXR2 projects. The mappings contain the following control schemes: <strong>PC</strong>, <strong>HMD</strong>, <strong>CAVE</strong>.</p>
+<hr>
+<h2 id="by-control-schemes">By control schemes</h2>
+<div class="tabGroup" id="tabgroup_1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_1_pc" role="tab" aria-controls="tabpanel_1_pc" data-tab="pc" tabindex="0" aria-selected="true">PC</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_hmd" role="tab" aria-controls="tabpanel_1_hmd" data-tab="hmd" tabindex="-1">HMD</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_cave" role="tab" aria-controls="tabpanel_1_cave" data-tab="cave" tabindex="-1">CAVE</a>
+</li>
+</ul>
+<section id="tabpanel_1_pc" role="tabpanel" data-tab="pc">
+<h4 id="locomotion">Locomotion</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Action</th>
+<th style="text-align: left;">Keyboard &amp; mouse</th>
+<th style="text-align: left;">Gamepad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Move</td>
+<td style="text-align: left;"><code>W</code>, <code>A</code>, <code>S</code>, <code>D</code></td>
+<td style="text-align: left;">Left Joystick</td>
+</tr>
+<tr>
+<td style="text-align: left;">Move (Vertical)</td>
+<td style="text-align: left;"><code>R</code>, <code>F</code></td>
+<td style="text-align: left;">Right Joystick Y</td>
+</tr>
+<tr>
+<td style="text-align: left;">Grab Move</td>
+<td style="text-align: left;"><code>G</code></td>
+<td style="text-align: left;">Button East</td>
+</tr>
+<tr>
+<td style="text-align: left;">Turn</td>
+<td style="text-align: left;">Mouse movement</td>
+<td style="text-align: left;">Right Joystick</td>
+</tr>
+<tr>
+<td style="text-align: left;">Turn (Snap)</td>
+<td style="text-align: left;"><code>Q</code>, <code>E</code></td>
+<td style="text-align: left;">D-pad</td>
+</tr>
+</tbody>
+</table>
+<h4 id="interaction">Interaction</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Action</th>
+<th style="text-align: left;">Keyboard &amp; mouse</th>
+<th style="text-align: left;">Gamepad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Interact</td>
+<td style="text-align: left;">Spacebar</td>
+<td style="text-align: left;">Button South</td>
+</tr>
+<tr>
+<td style="text-align: left;">Menu</td>
+<td style="text-align: left;"><code>M</code></td>
+<td style="text-align: left;">Button North</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabpanel_1_hmd" role="tabpanel" data-tab="hmd" aria-hidden="true" hidden="hidden">
+<h4 id="locomotion-1">Locomotion</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Action</th>
+<th style="text-align: left;">VR (Dual-hand)</th>
+<th style="text-align: left;">VR (One-hand)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Move</td>
+<td style="text-align: left;">Left Joystick</td>
+<td style="text-align: left;">/</td>
+</tr>
+<tr>
+<td style="text-align: left;">Move (Vertical)</td>
+<td style="text-align: left;">Right Joystick Y</td>
+<td style="text-align: left;">/</td>
+</tr>
+<tr>
+<td style="text-align: left;">Grab Move</td>
+<td style="text-align: left;">Left / Right Grip</td>
+<td style="text-align: left;">Grip</td>
+</tr>
+<tr>
+<td style="text-align: left;">Turn</td>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">/</td>
+</tr>
+<tr>
+<td style="text-align: left;">Turn (Snap)</td>
+<td style="text-align: left;">Right Joystick X</td>
+<td style="text-align: left;">Joystick</td>
+</tr>
+</tbody>
+</table>
+<h4 id="interaction-1">Interaction</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Action</th>
+<th style="text-align: left;">VR (Dual-hand)</th>
+<th style="text-align: left;">VR (One-hand)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Interact</td>
+<td style="text-align: left;">Left / Right Trigger</td>
+<td style="text-align: left;">Trigger</td>
+</tr>
+<tr>
+<td style="text-align: left;">Menu</td>
+<td style="text-align: left;"><code>A</code> / <code>X</code></td>
+<td style="text-align: left;"><code>A</code> / <code>X</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabpanel_1_cave" role="tabpanel" data-tab="cave" aria-hidden="true" hidden="hidden">
+<h4 id="locomotion-2">Locomotion</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Action</th>
+<th style="text-align: left;">Gamepad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Move</td>
+<td style="text-align: left;">Left Joystick</td>
+</tr>
+<tr>
+<td style="text-align: left;">Move (Vertical)</td>
+<td style="text-align: left;">Right Joystick Y</td>
+</tr>
+<tr>
+<td style="text-align: left;">Grab Move</td>
+<td style="text-align: left;">Button East</td>
+</tr>
+<tr>
+<td style="text-align: left;">Turn</td>
+<td style="text-align: left;">Right Joystick</td>
+</tr>
+<tr>
+<td style="text-align: left;">Turn (Snap)</td>
+<td style="text-align: left;">D-pad</td>
+</tr>
+</tbody>
+</table>
+<h4 id="interaction-2">Interaction</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Action</th>
+<th style="text-align: left;">Gamepad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Interact</td>
+<td style="text-align: left;">Button South</td>
+</tr>
+<tr>
+<td style="text-align: left;">Menu</td>
+<td style="text-align: left;">Button North</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/VOTANIC/VotanicXR2_Tutorial_Documentation_Source/blob/main/tutorials/input-system/default-inputs.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

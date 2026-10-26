@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class XInputManager | VotanicXR2 Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class XInputManager | VotanicXR2 Documentation ">
+      
+      <meta name="description" content="Static manager for XInput controller access with background input support. Provides direct access to Xbox controllers via native Windows XInput API.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VOTANIC/VotanicXR2_New/new/master/apiSpec/new?filename=Votanic_VXR2_Core_Input_XInputManager.md&amp;value=---%0Auid%3A%20Votanic.VXR2.Core.Input.XInputManager%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="VotanicXR2 Documentation">
+            VotanicXR2 Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Votanic.VXR2.Core.Input.XInputManager">
+
+
+
+  <h1 id="Votanic_VXR2_Core_Input_XInputManager" data-uid="Votanic.VXR2.Core.Input.XInputManager" class="text-break">
+Class XInputManager  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Votanic.html">Votanic</a>.<a class="xref" href="Votanic.VXR2.html">VXR2</a>.<a class="xref" href="Votanic.VXR2.Core.html">Core</a>.<a class="xref" href="Votanic.VXR2.Core.Input.html">Input</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Static manager for XInput controller access with background input support.
+Provides direct access to Xbox controllers via native Windows XInput API.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class XInputManager</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">XInputManager</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Votanic_VXR2_Core_Input_XInputManager_LEFT_THUMB_DEADZONE" data-uid="Votanic.VXR2.Core.Input.XInputManager.LEFT_THUMB_DEADZONE">
+  LEFT_THUMB_DEADZONE
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recommended deadzone for the left thumbstick (~24% of full deflection).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int LEFT_THUMB_DEADZONE = 7849</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Votanic_VXR2_Core_Input_XInputManager_RIGHT_THUMB_DEADZONE" data-uid="Votanic.VXR2.Core.Input.XInputManager.RIGHT_THUMB_DEADZONE">
+  RIGHT_THUMB_DEADZONE
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recommended deadzone for the right thumbstick (~26.5% of full deflection).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int RIGHT_THUMB_DEADZONE = 8689</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Votanic_VXR2_Core_Input_XInputManager_TRIGGER_THRESHOLD" data-uid="Votanic.VXR2.Core.Input.XInputManager.TRIGGER_THRESHOLD">
+  TRIGGER_THRESHOLD
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Analog trigger value (0–255) below which the trigger is treated as released.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int TRIGGER_THRESHOLD = 30</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Votanic_VXR2_Core_Input_XInputManager_GetCachedState_" data-uid="Votanic.VXR2.Core.Input.XInputManager.GetCachedState*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_XInputManager_GetCachedState_System_Int32_" data-uid="Votanic.VXR2.Core.Input.XInputManager.GetCachedState(System.Int32)">
+  GetCachedState(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L470"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get cached state without querying the controller (faster, may be outdated)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XInputManager.ControllerState GetCachedState(int controllerIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controllerIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Votanic.VXR2.Core.Input.XInputManager.html">XInputManager</a>.<a class="xref" href="Votanic.VXR2.Core.Input.XInputManager.ControllerState.html">ControllerState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_XInputManager_GetCapabilities_" data-uid="Votanic.VXR2.Core.Input.XInputManager.GetCapabilities*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_XInputManager_GetCapabilities_System_Int32_System_Boolean_" data-uid="Votanic.VXR2.Core.Input.XInputManager.GetCapabilities(System.Int32,System.Boolean)">
+  GetCapabilities(int, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L300"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the capabilities of a controller</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XInputManager.ControllerCapabilities GetCapabilities(int controllerIndex, bool useCache = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controllerIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Controller index (0-3)</p>
+</dd>
+    <dt><code>useCache</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Use cached capabilities if available</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Votanic.VXR2.Core.Input.XInputManager.html">XInputManager</a>.<a class="xref" href="Votanic.VXR2.Core.Input.XInputManager.ControllerCapabilities.html">ControllerCapabilities</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_XInputManager_GetConnectedControllers_" data-uid="Votanic.VXR2.Core.Input.XInputManager.GetConnectedControllers*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_XInputManager_GetConnectedControllers" data-uid="Votanic.VXR2.Core.Input.XInputManager.GetConnectedControllers">
+  GetConnectedControllers()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L500"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Helper method to get all connected controller indices</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int[] GetConnectedControllers()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_XInputManager_GetControllerType_" data-uid="Votanic.VXR2.Core.Input.XInputManager.GetControllerType*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_XInputManager_GetControllerType_System_Int32_" data-uid="Votanic.VXR2.Core.Input.XInputManager.GetControllerType(System.Int32)">
+  GetControllerType(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L366"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the controller subtype (gamepad, wheel, arcade stick, etc.)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XInputDeviceSubtype GetControllerType(int controllerIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controllerIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Controller index (0-3)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Votanic.VXR2.Core.Input.XInputDeviceSubtype.html">XInputDeviceSubtype</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_XInputManager_GetState_" data-uid="Votanic.VXR2.Core.Input.XInputManager.GetState*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_XInputManager_GetState_System_Int32_System_Boolean_" data-uid="Votanic.VXR2.Core.Input.XInputManager.GetState(System.Int32,System.Boolean)">
+  GetState(int, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the current state of a controller</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XInputManager.ControllerState GetState(int controllerIndex, bool applyDeadzone = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controllerIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Controller index (0-3)</p>
+</dd>
+    <dt><code>applyDeadzone</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Apply deadzone to thumbsticks</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Votanic.VXR2.Core.Input.XInputManager.html">XInputManager</a>.<a class="xref" href="Votanic.VXR2.Core.Input.XInputManager.ControllerState.html">ControllerState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_XInputManager_GetThumbstick_" data-uid="Votanic.VXR2.Core.Input.XInputManager.GetThumbstick*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_XInputManager_GetThumbstick_System_Int32_Votanic_VXR2_Core_Input_XInputThumbstick_System_Boolean_" data-uid="Votanic.VXR2.Core.Input.XInputManager.GetThumbstick(System.Int32,Votanic.VXR2.Core.Input.XInputThumbstick,System.Boolean)">
+  GetThumbstick(int, XInputThumbstick, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L401"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get thumbstick value for a controller</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 GetThumbstick(int controllerIndex, XInputThumbstick thumbstick, bool applyDeadzone = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controllerIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Controller index (0-3)</p>
+</dd>
+    <dt><code>thumbstick</code> <a class="xref" href="Votanic.VXR2.Core.Input.XInputThumbstick.html">XInputThumbstick</a></dt>
+    <dd><p>Which thumbstick to read</p>
+</dd>
+    <dt><code>applyDeadzone</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Apply deadzone</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_XInputManager_GetTrigger_" data-uid="Votanic.VXR2.Core.Input.XInputManager.GetTrigger*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_XInputManager_GetTrigger_System_Int32_Votanic_VXR2_Core_Input_XInputTrigger_" data-uid="Votanic.VXR2.Core.Input.XInputManager.GetTrigger(System.Int32,Votanic.VXR2.Core.Input.XInputTrigger)">
+  GetTrigger(int, XInputTrigger)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L388"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get trigger value for a controller</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float GetTrigger(int controllerIndex, XInputTrigger trigger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controllerIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Controller index (0-3)</p>
+</dd>
+    <dt><code>trigger</code> <a class="xref" href="Votanic.VXR2.Core.Input.XInputTrigger.html">XInputTrigger</a></dt>
+    <dd><p>Which trigger to read</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_XInputManager_IsButtonPressed_" data-uid="Votanic.VXR2.Core.Input.XInputManager.IsButtonPressed*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_XInputManager_IsButtonPressed_System_Int32_Votanic_VXR2_Core_Input_XInputButton_" data-uid="Votanic.VXR2.Core.Input.XInputManager.IsButtonPressed(System.Int32,Votanic.VXR2.Core.Input.XInputButton)">
+  IsButtonPressed(int, XInputButton)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L377"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if a specific button is pressed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsButtonPressed(int controllerIndex, XInputButton button)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controllerIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Controller index (0-3)</p>
+</dd>
+    <dt><code>button</code> <a class="xref" href="Votanic.VXR2.Core.Input.XInputButton.html">XInputButton</a></dt>
+    <dd><p>Button to check</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_XInputManager_IsConnected_" data-uid="Votanic.VXR2.Core.Input.XInputManager.IsConnected*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_XInputManager_IsConnected_System_Int32_" data-uid="Votanic.VXR2.Core.Input.XInputManager.IsConnected(System.Int32)">
+  IsConnected(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if a controller is connected</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsConnected(int controllerIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controllerIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Controller index (0-3)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_XInputManager_IsVibrating_" data-uid="Votanic.VXR2.Core.Input.XInputManager.IsVibrating*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_XInputManager_IsVibrating_System_Int32_" data-uid="Votanic.VXR2.Core.Input.XInputManager.IsVibrating(System.Int32)">
+  IsVibrating(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L461"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if vibration is active for a controller</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsVibrating(int controllerIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controllerIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_XInputManager_IsWireless_" data-uid="Votanic.VXR2.Core.Input.XInputManager.IsWireless*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_XInputManager_IsWireless_System_Int32_" data-uid="Votanic.VXR2.Core.Input.XInputManager.IsWireless(System.Int32)">
+  IsWireless(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L356"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if a controller is wireless</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsWireless(int controllerIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controllerIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Controller index (0-3)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_XInputManager_SetVibration_" data-uid="Votanic.VXR2.Core.Input.XInputManager.SetVibration*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_XInputManager_SetVibration_System_Int32_System_Single_System_Single_" data-uid="Votanic.VXR2.Core.Input.XInputManager.SetVibration(System.Int32,System.Single,System.Single)">
+  SetVibration(int, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Start controller vibration (In most case left motor = low frequency, right motor = high frequency)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool SetVibration(int controllerIndex, float leftMotor, float rightMotor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controllerIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Controller index (0-3)</p>
+</dd>
+    <dt><code>leftMotor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Left motor speed 0.0-1.0 (low frequency rumble)</p>
+</dd>
+    <dt><code>rightMotor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Right motor speed 0.0-1.0 (high frequency rumble)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_XInputManager_StopAllVibrations_" data-uid="Votanic.VXR2.Core.Input.XInputManager.StopAllVibrations*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_XInputManager_StopAllVibrations" data-uid="Votanic.VXR2.Core.Input.XInputManager.StopAllVibrations">
+  StopAllVibrations()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L447"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stop all controller vibrations</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void StopAllVibrations()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_XInputManager_StopVibration_" data-uid="Votanic.VXR2.Core.Input.XInputManager.StopVibration*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_XInputManager_StopVibration_System_Int32_" data-uid="Votanic.VXR2.Core.Input.XInputManager.StopVibration(System.Int32)">
+  StopVibration(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L439"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stop controller vibration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool StopVibration(int controllerIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controllerIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Controller index (0-3)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_XInputManager_SupportsVibration_" data-uid="Votanic.VXR2.Core.Input.XInputManager.SupportsVibration*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_XInputManager_SupportsVibration_System_Int32_" data-uid="Votanic.VXR2.Core.Input.XInputManager.SupportsVibration(System.Int32)">
+  SupportsVibration(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L346"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if a controller supports vibration/force feedback</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool SupportsVibration(int controllerIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controllerIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Controller index (0-3)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/XInputManager.cs/#L102" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

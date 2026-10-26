@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Using interactors | VotanicXR2 Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Using interactors | VotanicXR2 Documentation ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VOTANIC/VotanicXR2_Tutorial_Documentation_Source/blob/main/tutorials/interaction/using-interactors.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="VotanicXR2 Documentation">
+            VotanicXR2 Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="using-interactors">
+<h1 id="using-interactors">Using interactors</h1>
+
+<p>To customize behavior of existing interactors, VotanicXR2 allows developers to manually control interactors under player entities which is accessed through <code>VXRPlayer.Players.First().RightController.ControllerHandler</code>.</p>
+<hr>
+<h2 id="interactor-control-api">Interactor control API</h2>
+<p>The <code>VXRHandControllerHandler</code> class provides the following methods to control the interactors under player entities.</p>
+<h3 id="vxrhandcontrollerhandler-public-methods"><code>VXRHandControllerHandler</code> Public Methods</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Method</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>GetInteractors</code></td>
+<td style="text-align: left;">Returns a collection of all interactors registered to the entity.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>GetInteractorByName</code></td>
+<td style="text-align: left;">Retrieves a specific interactor by its GameObject name. Returns <code>null</code> if not found.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>IsInteractorActive</code></td>
+<td style="text-align: left;">Checks if an interactor is active by name or if a specific interactor instance is active. Returns <code>false</code> if the interactor is missing.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SetInteractorActive</code></td>
+<td style="text-align: left;">Enables or disables an interactor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ResetInteractors</code></td>
+<td style="text-align: left;">Disables all interactors and clears the interaction group.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>RegisterActiveInteractor</code></td>
+<td style="text-align: left;">Register an interactor that was not created from VXRHandControllerSetting.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>UnregisterActiveInteractor</code></td>
+<td style="text-align: left;">Unregister an interactor previously added with RegisterActiveInteractor or created from settings.</td>
+</tr>
+</tbody>
+</table>
+<!---
+This feature is not included in SDK MVP:
+Set input source mode of interactors then call QueueManualState to manually trigger an interaction
+-->
+<h2 id="code-example-press-button-to-cycle-through-interactors">Code example: Press button to cycle through interactors</h2>
+<p>This example demonstrates how to implement cycling through a bunch of interactors when you press a button.</p>
+<pre><code class="lang-csharp">using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
+using Votanic.VXR2.Core;
+using Votanic.VXR2.Core.Input;
+using Votanic.VXR2.Core.Player;
+
+namespace Votanic.VXR2.Sample
+{
+    /// &lt;summary&gt;
+    /// Cycles the right-hand interactors, including one registered at runtime outside of
+    /// &lt;see cref=&quot;VXRHandControllerSetting&quot;/&gt;.
+    /// Assign &lt;see cref=&quot;sampleInteractor&quot;/&gt; in the inspector (a scene object with XRBaseInteractor).
+    /// &lt;/summary&gt;
+    public class InteractorControl : MonoBehaviour
+    {
+        private readonly string triggerActionName = &quot;NextInteractor&quot;;
+
+        [SerializeField]
+        [Tooltip(&quot;Optional interactor that is not listed in the hand controller setting. Registered at runtime onto the right controller.&quot;)]
+        private XRBaseInteractor sampleInteractor;
+
+        private VXRActionBinding&lt;bool&gt; _buttonInput;
+        private List&lt;XRBaseInteractor&gt; interactors;
+        private int index = -1;
+        private VXRHandControllerHandler controllerHandler;
+        private bool sampleInteractorRegistered;
+
+        IEnumerator Start()
+        {
+            yield return new WaitUntil(() =&gt; VXRObjectManager.Instance.Initialized);
+            _buttonInput = new VXRActionBinding&lt;bool&gt;(triggerActionName, ButtonAction);
+            controllerHandler = VXRPlayer.Players.First().RightController.ControllerHandler; // Access controller handler of current player
+
+            if (sampleInteractor != null)
+            {
+                controllerHandler.RegisterActiveInteractor(sampleInteractor, true);
+                sampleInteractorRegistered = true;
+            }
+
+            interactors = controllerHandler.GetInteractors().ToList(); // Get list of interactor attached to the controller
+            controllerHandler.ResetInteractors();
+            MoveToNextInteractor();
+        }
+
+        private void OnEnable()
+        {
+            if (_buttonInput != null) _buttonInput.Bound = true;
+        }
+        private void OnDisable()
+        {
+            if (_buttonInput != null) _buttonInput.Bound = false;
+        }
+        private void OnDestroy()
+        {
+            if (sampleInteractorRegistered &amp;&amp; controllerHandler != null &amp;&amp; sampleInteractor != null)
+            {
+                controllerHandler.UnregisterActiveInteractor(sampleInteractor);
+                sampleInteractorRegistered = false;
+            }
+            if (_buttonInput != null) _buttonInput.Dispose();
+        }
+
+        private void ButtonAction(bool value)
+        {
+            if (value) MoveToNextInteractor();
+        }
+
+        private void MoveToNextInteractor()
+        {
+            if (interactors == null || interactors.Count == 0) return;
+            index++;
+            index %= interactors.Count;
+            controllerHandler.ResetInteractors();
+            controllerHandler.SetInteractorActive(interactors[index], true);
+        }
+    }
+}
+
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/VOTANIC/VotanicXR2_Tutorial_Documentation_Source/blob/main/tutorials/interaction/using-interactors.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

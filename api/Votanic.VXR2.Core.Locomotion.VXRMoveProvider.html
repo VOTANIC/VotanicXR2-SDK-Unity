@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class VXRMoveProvider | VotanicXR2 Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class VXRMoveProvider | VotanicXR2 Documentation ">
+      
+      <meta name="description" content="Smooth locomotion provider for the vXR2 player. Moves the XR Origin from thumbstick input with optional head- or hand-relative direction.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VOTANIC/VotanicXR2_New/new/master/apiSpec/new?filename=Votanic_VXR2_Core_Locomotion_VXRMoveProvider.md&amp;value=---%0Auid%3A%20Votanic.VXR2.Core.Locomotion.VXRMoveProvider%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="VotanicXR2 Documentation">
+            VotanicXR2 Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider">
+
+
+
+  <h1 id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider" class="text-break">
+Class VXRMoveProvider  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Locomotion/VXRMoveProvider.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Votanic.html">Votanic</a>.<a class="xref" href="Votanic.VXR2.html">VXR2</a>.<a class="xref" href="Votanic.VXR2.Core.html">Core</a>.<a class="xref" href="Votanic.VXR2.Core.Locomotion.html">Locomotion</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Smooth locomotion provider for the vXR2 player.
+Moves the XR Origin from thumbstick input with optional head- or hand-relative direction.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class VXRMoveProvider : LocomotionProvider, IGravityController</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">VXRMoveProvider</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">IGravityController</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_canProcess_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.canProcess*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_canProcess" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.canProcess">
+  canProcess
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Locomotion/VXRMoveProvider.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this provider can process locomotion while enabled and active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool canProcess { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_gravityPaused_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.gravityPaused*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_gravityPaused" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.gravityPaused">
+  gravityPaused
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Locomotion/VXRMoveProvider.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether gravity is paused because fly mode is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool gravityPaused { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_ComputeDesiredMove_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.ComputeDesiredMove*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_ComputeDesiredMove_Vector2_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.ComputeDesiredMove(Vector2)">
+  ComputeDesiredMove(Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Locomotion/VXRMoveProvider.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines how much to slide the rig due to <code class="paramref">input</code> vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector3 ComputeDesiredMove(Vector2 input)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>input</code> <span class="xref">Vector2</span></dt>
+    <dd><p>Input vector, such as from a thumbstick.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd><p>Returns the translation amount in world space to move the rig.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_GetLeftInput_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.GetLeftInput*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_GetLeftInput_Vector2_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.GetLeftInput(Vector2)">
+  GetLeftInput(Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Locomotion/VXRMoveProvider.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets movement input from the left hand controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetLeftInput(Vector2 leftInput)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>leftInput</code> <span class="xref">Vector2</span></dt>
+    <dd><p>Thumbstick or movement input for the left hand.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_GetRightInput_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.GetRightInput*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_GetRightInput_Vector2_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.GetRightInput(Vector2)">
+  GetRightInput(Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Locomotion/VXRMoveProvider.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets movement input from the right hand controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetRightInput(Vector2 rightInput)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rightInput</code> <span class="xref">Vector2</span></dt>
+    <dd><p>Thumbstick or movement input for the right hand.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_GetVerticalInput_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.GetVerticalInput*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_GetVerticalInput_System_Single_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.GetVerticalInput(System.Single)">
+  GetVerticalInput(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Locomotion/VXRMoveProvider.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets floating and sinking input. Positive values float up; negative values sink down.
+Applied only when <span class="xref">Votanic.VXR2.Core.Locomotion.VXRMoveProvider.enableVertical</span> is true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetVerticalInput(float verticalInput)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>verticalInput</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Axis value in range [-1, 1].</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_MoveRig_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.MoveRig*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_MoveRig_Vector3_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.MoveRig(Vector3)">
+  MoveRig(Vector3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Locomotion/VXRMoveProvider.cs/#L371"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a locomotion event to move the rig by <code class="paramref">translationInWorldSpace</code>,
+and optionally applies gravity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void MoveRig(Vector3 translationInWorldSpace)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>translationInWorldSpace</code> <span class="xref">Vector3</span></dt>
+    <dd><p>The translation amount in world space to move the rig (pre-gravity).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_OnEnable_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.OnEnable*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_OnEnable" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.OnEnable">
+  OnEnable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Locomotion/VXRMoveProvider.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resets in-air velocity when the provider is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnEnable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_OnGravityLockChanged_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.OnGravityLockChanged*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_OnGravityLockChanged_GravityOverride_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.OnGravityLockChanged(GravityOverride)">
+  OnGravityLockChanged(GravityOverride)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Locomotion/VXRMoveProvider.cs/#L428"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the active gravity override changes. Override to respond to gravity lock changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnGravityLockChanged(GravityOverride gravityOverride)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gravityOverride</code> <span class="xref">GravityOverride</span></dt>
+    <dd><p>The gravity override currently in effect.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_OnGroundedChanged_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.OnGroundedChanged*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_OnGroundedChanged_System_Boolean_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.OnGroundedChanged(System.Boolean)">
+  OnGroundedChanged(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Locomotion/VXRMoveProvider.cs/#L420"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the grounded state changes. Override to respond to landing or leaving the ground.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnGroundedChanged(bool isGrounded)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isGrounded</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the character controller is grounded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_OnLocomotionStateChanging_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.OnLocomotionStateChanging*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_OnLocomotionStateChanging_LocomotionState_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.OnLocomotionStateChanging(LocomotionState)">
+  OnLocomotionStateChanging(LocomotionState)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Locomotion/VXRMoveProvider.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Locks or unlocks gravity when locomotion starts or ends.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnLocomotionStateChanging(LocomotionState state)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>state</code> <span class="xref">LocomotionState</span></dt>
+    <dd><p>The locomotion state being entered.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_RemoveGravityLock_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.RemoveGravityLock*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_RemoveGravityLock" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.RemoveGravityLock">
+  RemoveGravityLock()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Locomotion/VXRMoveProvider.cs/#L398"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes this provider's gravity lock from the configured GravityProvider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveGravityLock()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_Setup_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.Setup*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_Setup_LocomotionMediator_Votanic_VXR2_Core_Player_VXRHeadController_Votanic_VXR2_Core_Player_VXRHandController_Votanic_VXR2_Core_Player_VXRHandController_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.Setup(LocomotionMediator,Votanic.VXR2.Core.Player.VXRHeadController,Votanic.VXR2.Core.Player.VXRHandController,Votanic.VXR2.Core.Player.VXRHandController)">
+  Setup(LocomotionMediator, VXRHeadController, VXRHandController, VXRHandController)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Locomotion/VXRMoveProvider.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes references to the locomotion mediator, XR Origin, and player controllers.
+Creates a combined forward source transform from configured movement directions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Setup(LocomotionMediator locomotionMediator, VXRHeadController head, VXRHandController left, VXRHandController right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>locomotionMediator</code> <span class="xref">LocomotionMediator</span></dt>
+    <dd><p>Mediator that owns the XR Origin.</p>
+</dd>
+    <dt><code>head</code> <a class="xref" href="Votanic.VXR2.Core.Player.VXRHeadController.html">VXRHeadController</a></dt>
+    <dd><p>Head controller used for head-relative movement.</p>
+</dd>
+    <dt><code>left</code> <a class="xref" href="Votanic.VXR2.Core.Player.VXRHandController.html">VXRHandController</a></dt>
+    <dd><p>Left hand controller used for hand-relative movement and input.</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="Votanic.VXR2.Core.Player.VXRHandController.html">VXRHandController</a></dt>
+    <dd><p>Right hand controller used for hand-relative movement and input.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_TryLockGravity_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.TryLockGravity*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_TryLockGravity_GravityOverride_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.TryLockGravity(GravityOverride)">
+  TryLockGravity(GravityOverride)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Locomotion/VXRMoveProvider.cs/#L390"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to lock gravity through the configured GravityProvider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryLockGravity(GravityOverride gravityOverride)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gravityOverride</code> <span class="xref">GravityOverride</span></dt>
+    <dd><p>The gravity override to apply while moving.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if gravity was locked; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_Update_" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.Update*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Locomotion_VXRMoveProvider_Update" data-uid="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.Update">
+  Update()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Locomotion/VXRMoveProvider.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads combined hand input each frame, computes movement, and queues rig translation when needed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Update()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Locomotion/VXRMoveProvider.cs/#L14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

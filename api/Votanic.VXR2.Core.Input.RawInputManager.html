@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RawInputManager | VotanicXR2 Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RawInputManager | VotanicXR2 Documentation ">
+      
+      <meta name="description" content="Static manager for Windows Raw Input (keyboard and mouse) with background input support. Provides direct access to keyboard and mouse input via native Windows API. Works even when Unity window is not focused.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VOTANIC/VotanicXR2_New/new/master/apiSpec/new?filename=Votanic_VXR2_Core_Input_RawInputManager.md&amp;value=---%0Auid%3A%20Votanic.VXR2.Core.Input.RawInputManager%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="VotanicXR2 Documentation">
+            VotanicXR2 Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Votanic.VXR2.Core.Input.RawInputManager">
+
+
+
+  <h1 id="Votanic_VXR2_Core_Input_RawInputManager" data-uid="Votanic.VXR2.Core.Input.RawInputManager" class="text-break">
+Class RawInputManager  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Votanic.html">Votanic</a>.<a class="xref" href="Votanic.VXR2.html">VXR2</a>.<a class="xref" href="Votanic.VXR2.Core.html">Core</a>.<a class="xref" href="Votanic.VXR2.Core.Input.html">Input</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Static manager for Windows Raw Input (keyboard and mouse) with background input support.
+Provides direct access to keyboard and mouse input via native Windows API.
+Works even when Unity window is not focused.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class RawInputManager</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">RawInputManager</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_GetKeyName_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.GetKeyName*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_GetKeyName_Votanic_VXR2_Core_Input_VirtualKeyCode_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.GetKeyName(Votanic.VXR2.Core.Input.VirtualKeyCode)">
+  GetKeyName(VirtualKeyCode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L552"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a readable string representation of a key</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetKeyName(VirtualKeyCode key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="Votanic.VXR2.Core.Input.VirtualKeyCode.html">VirtualKeyCode</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_GetKeyboardState_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.GetKeyboardState*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_GetKeyboardState" data-uid="Votanic.VXR2.Core.Input.RawInputManager.GetKeyboardState">
+  GetKeyboardState()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L390"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the current keyboard state</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RawInputManager.KeyboardState GetKeyboardState()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Votanic.VXR2.Core.Input.RawInputManager.html">RawInputManager</a>.<a class="xref" href="Votanic.VXR2.Core.Input.RawInputManager.KeyboardState.html">KeyboardState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_GetMouseClientPosition_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.GetMouseClientPosition*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_GetMouseClientPosition" data-uid="Votanic.VXR2.Core.Input.RawInputManager.GetMouseClientPosition">
+  GetMouseClientPosition()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L419"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get mouse position relative to the foreground window's client area</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 GetMouseClientPosition()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_GetMouseDelta_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.GetMouseDelta*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_GetMouseDelta" data-uid="Votanic.VXR2.Core.Input.RawInputManager.GetMouseDelta">
+  GetMouseDelta()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L475"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get mouse delta (movement since last frame)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 GetMouseDelta()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_GetMousePosition_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.GetMousePosition*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_GetMousePosition" data-uid="Votanic.VXR2.Core.Input.RawInputManager.GetMousePosition">
+  GetMousePosition()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L406"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get mouse position in screen coordinates</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 GetMousePosition()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_GetMouseState_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.GetMouseState*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_GetMouseState" data-uid="Votanic.VXR2.Core.Input.RawInputManager.GetMouseState">
+  GetMouseState()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L398"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the current mouse state</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RawInputManager.MouseState GetMouseState()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Votanic.VXR2.Core.Input.RawInputManager.html">RawInputManager</a>.<a class="xref" href="Votanic.VXR2.Core.Input.RawInputManager.MouseState.html">MouseState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_GetPressedKeys_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.GetPressedKeys*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_GetPressedKeys" data-uid="Votanic.VXR2.Core.Input.RawInputManager.GetPressedKeys">
+  GetPressedKeys()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L499"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get all keys currently pressed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;VirtualKeyCode&gt; GetPressedKeys()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Votanic.VXR2.Core.Input.VirtualKeyCode.html">VirtualKeyCode</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_IsAltDown_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsAltDown*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_IsAltDown" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsAltDown">
+  IsAltDown()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L531"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if Alt key is down (either left or right)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsAltDown()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_IsAnyKeyDown_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsAnyKeyDown*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_IsAnyKeyDown" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsAnyKeyDown">
+  IsAnyKeyDown()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L483"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if any key is currently pressed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsAnyKeyDown()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_IsControlDown_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsControlDown*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_IsControlDown" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsControlDown">
+  IsControlDown()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L523"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if Ctrl key is down (either left or right)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsControlDown()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_IsKeyCombinationDown_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsKeyCombinationDown*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_IsKeyCombinationDown_Votanic_VXR2_Core_Input_VirtualKeyCode___" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsKeyCombinationDown(Votanic.VXR2.Core.Input.VirtualKeyCode[])">
+  IsKeyCombinationDown(params VirtualKeyCode[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L539"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if a key combination is pressed (e.g., Ctrl+S)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsKeyCombinationDown(params VirtualKeyCode[] keys)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>keys</code> <a class="xref" href="Votanic.VXR2.Core.Input.VirtualKeyCode.html">VirtualKeyCode</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_IsKeyDown_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsKeyDown*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_IsKeyDown_Votanic_VXR2_Core_Input_VirtualKeyCode_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsKeyDown(Votanic.VXR2.Core.Input.VirtualKeyCode)">
+  IsKeyDown(VirtualKeyCode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L357"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if a key is currently held down</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsKeyDown(VirtualKeyCode key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="Votanic.VXR2.Core.Input.VirtualKeyCode.html">VirtualKeyCode</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_IsKeyPressed_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsKeyPressed*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_IsKeyPressed_Votanic_VXR2_Core_Input_VirtualKeyCode_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsKeyPressed(Votanic.VXR2.Core.Input.VirtualKeyCode)">
+  IsKeyPressed(VirtualKeyCode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L367"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if a key was pressed this frame (wasn't down last frame, is down this frame)
+Requires UpdateStates() to be called each frame</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsKeyPressed(VirtualKeyCode key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="Votanic.VXR2.Core.Input.VirtualKeyCode.html">VirtualKeyCode</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_IsKeyReleased_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsKeyReleased*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_IsKeyReleased_Votanic_VXR2_Core_Input_VirtualKeyCode_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsKeyReleased(Votanic.VXR2.Core.Input.VirtualKeyCode)">
+  IsKeyReleased(VirtualKeyCode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L379"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if a key was released this frame (was down last frame, isn't down this frame)
+Requires UpdateStates() to be called each frame</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsKeyReleased(VirtualKeyCode key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="Votanic.VXR2.Core.Input.VirtualKeyCode.html">VirtualKeyCode</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_IsLeftMouseButtonDown_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsLeftMouseButtonDown*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_IsLeftMouseButtonDown" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsLeftMouseButtonDown">
+  IsLeftMouseButtonDown()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L427"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if left mouse button is down</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsLeftMouseButtonDown()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_IsLeftMouseButtonPressed_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsLeftMouseButtonPressed*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_IsLeftMouseButtonPressed" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsLeftMouseButtonPressed">
+  IsLeftMouseButtonPressed()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L451"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if left mouse button was pressed this frame</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsLeftMouseButtonPressed()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_IsMiddleMouseButtonDown_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsMiddleMouseButtonDown*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_IsMiddleMouseButtonDown" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsMiddleMouseButtonDown">
+  IsMiddleMouseButtonDown()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L443"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if middle mouse button is down</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsMiddleMouseButtonDown()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_IsMiddleMouseButtonPressed_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsMiddleMouseButtonPressed*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_IsMiddleMouseButtonPressed" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsMiddleMouseButtonPressed">
+  IsMiddleMouseButtonPressed()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L467"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if middle mouse button was pressed this frame</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsMiddleMouseButtonPressed()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_IsRightMouseButtonDown_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsRightMouseButtonDown*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_IsRightMouseButtonDown" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsRightMouseButtonDown">
+  IsRightMouseButtonDown()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L435"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if right mouse button is down</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsRightMouseButtonDown()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_IsRightMouseButtonPressed_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsRightMouseButtonPressed*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_IsRightMouseButtonPressed" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsRightMouseButtonPressed">
+  IsRightMouseButtonPressed()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L459"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if right mouse button was pressed this frame</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsRightMouseButtonPressed()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_IsShiftDown_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsShiftDown*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_IsShiftDown" data-uid="Votanic.VXR2.Core.Input.RawInputManager.IsShiftDown">
+  IsShiftDown()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L515"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if Shift key is down (either left or right)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsShiftDown()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_SetRelativeMouseDeltaEnabled_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.SetRelativeMouseDeltaEnabled*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_SetRelativeMouseDeltaEnabled_System_Boolean_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.SetRelativeMouseDeltaEnabled(System.Boolean)">
+  SetRelativeMouseDeltaEnabled(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L313"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When enabled, mouse delta is read as relative movement so it still works while the cursor is locked to the view centre.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetRelativeMouseDeltaEnabled(bool enabled)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True while cursor-lock / centre-reposition mode is active.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_RawInputManager_UpdateStates_" data-uid="Votanic.VXR2.Core.Input.RawInputManager.UpdateStates*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_RawInputManager_UpdateStates" data-uid="Votanic.VXR2.Core.Input.RawInputManager.UpdateStates">
+  UpdateStates()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Update all input states. Call this once per frame (e.g., in Update()).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UpdateStates()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/RawInputManager.cs/#L178" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

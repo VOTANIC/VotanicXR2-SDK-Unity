@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace Votanic.VXR2.Core.Locomotion | VotanicXR2 Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Votanic.VXR2.Core.Locomotion | VotanicXR2 Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="VotanicXR2 Documentation">
+            VotanicXR2 Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Votanic.VXR2.Core.Locomotion">
+
+  <h1 id="Votanic_VXR2_Core_Locomotion" data-uid="Votanic.VXR2.Core.Locomotion" class="text-break">Namespace Votanic.VXR2.Core.Locomotion</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Locomotion.VXRBodyGroundPosition.html">VXRBodyGroundPosition</a></dt>
+      <dd><p>Positions the XR Origin at a ground-aligned target while compensating for head offset.
+Used during teleportation to place the body at the destination.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Locomotion.VXRCameraForwardXZAlignment.html">VXRCameraForwardXZAlignment</a></dt>
+      <dd><p>Aligns the XR Origin forward direction on the XZ plane relative to the head controller.
+Used during teleportation to rotate the body around the head.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Locomotion.VXRHeadProvider.html">VXRHeadProvider</a></dt>
+      <dd><p>Locomotion provider that compensates for horizontal head movement by shifting the XR Origin.
+Used by <a class="xref" href="Votanic.VXR2.Core.Player.VXRHeadController.html">VXRHeadController</a> to keep the play space stable during head tracking.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Locomotion.VXRLocomotionWrapper.html">VXRLocomotionWrapper</a></dt>
+      <dd><p>Central wrapper that wires vXR2 player controllers to XRI locomotion providers and input bindings.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.html">VXRMoveProvider</a></dt>
+      <dd><p>Smooth locomotion provider for the vXR2 player.
+Moves the XR Origin from thumbstick input with optional head- or hand-relative direction.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Locomotion.VXRRecallProvider.html">VXRRecallProvider</a></dt>
+      <dd><p>Locomotion provider that instantly moves the XR Origin to a target transform.
+Used by <a class="xref" href="Votanic.VXR2.Core.Player.VXRPlayer.html#Votanic_VXR2_Core_Player_VXRPlayer_RecallPlayers_Transform_">RecallPlayers(Transform)</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Locomotion.VXRRecallTransformation.html">VXRRecallTransformation</a></dt>
+      <dd><p>Body transformation that snaps the XR Origin to a target transform's position and rotation.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Locomotion.VXRSnapTurnProvider.html">VXRSnapTurnProvider</a></dt>
+      <dd><p>vXR2 snap turn provider based on XRI SnapTurnProvider.
+Rotates the rig in fixed left/right increments. Does not support 180° turn-around.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Locomotion.VXRTeleportationProvider.html">VXRTeleportationProvider</a></dt>
+      <dd><p>vXR2 teleportation provider that aligns body orientation and position using the head controller,
+and assigns itself to teleport anchors when the Teleport interactor hovers them.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Locomotion.VXRUpAlignment.html">VXRUpAlignment</a></dt>
+      <dd><p>Aligns the XR Origin up vector using the configured head controller context.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.ForwardSelectionMode.html">VXRMoveProvider.ForwardSelectionMode</a></dt>
+      <dd><p>Defines which source provides the fly forward and right axes.
+Head is used only as the last fallback of <a class="xref" href="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.ForwardSelectionMode.html#Votanic_VXR2_Core_Locomotion_VXRMoveProvider_ForwardSelectionMode_Auto">Auto</a> and is not a user-facing option.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Locomotion.VXRMoveProvider.MovementDirection.html">VXRMoveProvider.MovementDirection</a></dt>
+      <dd><p>Defines which transform the XR Origin's movement direction is relative to.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

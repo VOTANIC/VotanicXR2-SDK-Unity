@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class VXRBaseEntity | VotanicXR2 Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class VXRBaseEntity | VotanicXR2 Documentation ">
+      
+      <meta name="description" content="Base class for XR entities that manages tracking, positioning, and rotation within the VotanicXR system. VXRBaseEntity provides core functionality for entities that can be tracked in XR space, including:  Tracking state management (IsTracking, Position, Rotation) Input binding through action bindings Lost tracking behavior handling (Stay, Default, CustomLocation) Entity lifecycle management (Awake, Enable, Disable, Destroy) Centralized entity registry for bulk updates  Derived classes should override Setup() to customize initialization and the input action event methods (IsTrackedInputActionEvent, PositionInputActionEvent, RotationInputActionEvent) to handle specific tracking data. The entity maintains both raw tracking data and applies transformations based on the current tracking mode and lost tracking configuration from entityData.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VOTANIC/VotanicXR2_New/new/master/apiSpec/new?filename=Votanic_VXR2_Entity_VXRBaseEntity.md&amp;value=---%0Auid%3A%20Votanic.VXR2.Entity.VXRBaseEntity%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="VotanicXR2 Documentation">
+            VotanicXR2 Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Votanic.VXR2.Entity.VXRBaseEntity">
+
+
+
+  <h1 id="Votanic_VXR2_Entity_VXRBaseEntity" data-uid="Votanic.VXR2.Entity.VXRBaseEntity" class="text-break">
+Class VXRBaseEntity  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Votanic.html">Votanic</a>.<a class="xref" href="Votanic.VXR2.html">VXR2</a>.<a class="xref" href="Votanic.VXR2.Entity.html">Entity</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Base class for XR entities that manages tracking, positioning, and rotation within the VotanicXR system.</p>
+<p>VXRBaseEntity provides core functionality for entities that can be tracked in XR space, including:</p>
+<ul>
+<li>Tracking state management (IsTracking, Position, Rotation)</li>
+<li>Input binding through action bindings</li>
+<li>Lost tracking behavior handling (Stay, Default, CustomLocation)</li>
+<li>Entity lifecycle management (Awake, Enable, Disable, Destroy)</li>
+<li>Centralized entity registry for bulk updates</li>
+</ul>
+<p>Derived classes should override Setup() to customize initialization and the input action event methods
+(IsTrackedInputActionEvent, PositionInputActionEvent, RotationInputActionEvent) to handle specific tracking data.</p>
+<p>The entity maintains both raw tracking data and applies transformations based on the current tracking mode
+and lost tracking configuration from entityData.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class VXRBaseEntity : MonoBehaviour, IVXRBaseEntity</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">VXRBaseEntity</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Votanic.VXR2.Entity.IVXRBaseEntity.html">IVXRBaseEntity</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Votanic.VXR2.Core.Player.VXRHeadController.html">VXRHeadController</a></div>
+      <div><a class="xref" href="Votanic.VXR2.Core.Player.VXRInputEntity.html">VXRInputEntity</a></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_Entities_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.Entities*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_Entities" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.Entities">
+  Entities
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>List of spawned VXRBaseEntity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;VXRBaseEntity&gt; Entities { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Votanic.VXR2.Entity.VXRBaseEntity.html">VXRBaseEntity</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_EntityName_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.EntityName*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_EntityName" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.EntityName">
+  EntityName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Name of this entity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string EntityName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_EntityType_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.EntityType*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_EntityType" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.EntityType">
+  EntityType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Entity type of this entity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XREntityType EntityType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">XREntityType</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_IsTrackedInput_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.IsTrackedInput*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_IsTrackedInput" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.IsTrackedInput">
+  IsTrackedInput
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Action binding of IsTracked action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VXRActionBinding&lt;bool&gt; IsTrackedInput { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Votanic.VXR2.Core.Input.VXRActionBinding-1.html">VXRActionBinding</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_PositionInput_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.PositionInput*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_PositionInput" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.PositionInput">
+  PositionInput
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Action binding of PositionInput action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VXRActionBinding&lt;Vector3&gt; PositionInput { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Votanic.VXR2.Core.Input.VXRActionBinding-1.html">VXRActionBinding</a>&lt;<span class="xref">Vector3</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_RotationInput_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.RotationInput*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_RotationInput" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.RotationInput">
+  RotationInput
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Action binding of RotationInput action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VXRActionBinding&lt;Quaternion&gt; RotationInput { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Votanic.VXR2.Core.Input.VXRActionBinding-1.html">VXRActionBinding</a>&lt;<span class="xref">Quaternion</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_TrackedType_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.TrackedType*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_TrackedType" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.TrackedType">
+  TrackedType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tracking mode of this entity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XREntityTrackingMode TrackedType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">XREntityTrackingMode</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_Awake_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.Awake*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_Awake" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.Awake">
+  Awake()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Awake()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_GetActionName_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.GetActionName*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_GetActionName_System_String_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.GetActionName(System.String)">
+  GetActionName(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the action name for the given action body, the action name will be the concatenation of the entity name and the action body.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string GetActionName(string actionBody)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actionBody</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The action body, e.g. &quot;IsTracked&quot;, &quot;Position&quot;, &quot;Rotation&quot;.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The action name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_IsTrackedInputActionEvent_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.IsTrackedInputActionEvent*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_IsTrackedInputActionEvent_System_Boolean_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.IsTrackedInputActionEvent(System.Boolean)">
+  IsTrackedInputActionEvent(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event handler for the IsTracked action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void IsTrackedInputActionEvent(bool value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The value of the IsTracked action.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_OnDestroy_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.OnDestroy*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_OnDestroy" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.OnDestroy">
+  OnDestroy()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDestroy()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_OnDisable_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.OnDisable*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_OnDisable" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.OnDisable">
+  OnDisable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDisable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_OnEnable_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.OnEnable*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_OnEnable" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.OnEnable">
+  OnEnable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEnable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_OnUpdate_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.OnUpdate*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_OnUpdate" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.OnUpdate">
+  OnUpdate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Custom update method, will be called by the <a class="xref" href="Votanic.VXR2.Core.Input.VXRInputManager.html#Votanic_VXR2_Core_Input_VXRInputManager_OnAfterInputUpdate">OnAfterInputUpdate</a> event of the input manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnUpdate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_PositionInputActionEvent_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.PositionInputActionEvent*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_PositionInputActionEvent_Vector3_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.PositionInputActionEvent(Vector3)">
+  PositionInputActionEvent(Vector3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L294"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event handler for the Position action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void PositionInputActionEvent(Vector3 value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">Vector3</span></dt>
+    <dd><p>The value of the Position action.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_ProcessInput_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.ProcessInput*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_ProcessInput" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.ProcessInput">
+  ProcessInput()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Process the input and return the calculated pose.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Pose ProcessInput()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Pose</span></dt>
+    <dd><p>The calculated pose.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_RotationInputActionEvent_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.RotationInputActionEvent*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_RotationInputActionEvent_Quaternion_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.RotationInputActionEvent(Quaternion)">
+  RotationInputActionEvent(Quaternion)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L302"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event handler for the Rotation action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RotationInputActionEvent(Quaternion value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">Quaternion</span></dt>
+    <dd><p>The value of the Rotation action.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_Setup_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.Setup*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_Setup" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.Setup">
+  Setup()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L208"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Setup with input bindings and other information.
+Virtual method, can be overridden by derived classes to customize the setup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Setup()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Entity_VXRBaseEntity_SetupTrackingBinding_" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.SetupTrackingBinding*"></a>
+
+  <h3 id="Votanic_VXR2_Entity_VXRBaseEntity_SetupTrackingBinding" data-uid="Votanic.VXR2.Entity.VXRBaseEntity.SetupTrackingBinding">
+  SetupTrackingBinding()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Setup the required binding for tracking.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SetupTrackingBinding()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Entity/VXRBaseEntity.cs/#L26" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

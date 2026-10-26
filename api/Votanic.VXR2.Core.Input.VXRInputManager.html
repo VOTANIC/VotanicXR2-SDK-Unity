@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class VXRInputManager | VotanicXR2 Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class VXRInputManager | VotanicXR2 Documentation ">
+      
+      <meta name="description" content="Input Manager for VXR framework. Handles input action mapping, device modules, interactions, processors, and event dispatching. Support 5 input types: bool, axis (a.k.a. float), Vector2, Vector3, Quaternion. Supports composite bindings and control schemes. Records action values of current and previous frames for querying.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VOTANIC/VotanicXR2_New/new/master/apiSpec/new?filename=Votanic_VXR2_Core_Input_VXRInputManager.md&amp;value=---%0Auid%3A%20Votanic.VXR2.Core.Input.VXRInputManager%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="VotanicXR2 Documentation">
+            VotanicXR2 Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Votanic.VXR2.Core.Input.VXRInputManager">
+
+
+
+  <h1 id="Votanic_VXR2_Core_Input_VXRInputManager" data-uid="Votanic.VXR2.Core.Input.VXRInputManager" class="text-break">
+Class VXRInputManager  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Votanic.html">Votanic</a>.<a class="xref" href="Votanic.VXR2.html">VXR2</a>.<a class="xref" href="Votanic.VXR2.Core.html">Core</a>.<a class="xref" href="Votanic.VXR2.Core.Input.html">Input</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Input Manager for VXR framework.
+Handles input action mapping, device modules, interactions, processors, and event dispatching.
+Support 5 input types: bool, axis (a.k.a. float), Vector2, Vector3, Quaternion.
+Supports composite bindings and control schemes.
+Records action values of current and previous frames for querying.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class VXRInputManager : MonoBehaviour</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">VXRInputManager</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_OnActionTriggered" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.OnActionTriggered">
+  OnActionTriggered
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fired whenever an action is triggered. Subscribe to receive all action events regardless of type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;ActionEventData&gt; OnActionTriggered</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Votanic.VXR2.Core.Input.ActionEventData.html">ActionEventData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_logLevel" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.logLevel">
+  logLevel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Minimum severity of input-system log messages that are printed.
+Assigned to <a class="xref" href="Votanic.VXR2.Core.Input.VXRInputLogger.html#Votanic_VXR2_Core_Input_VXRInputLogger_CurrentLogLevel">CurrentLogLevel</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VXRInputLogger.LogLevel logLevel</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Votanic.VXR2.Core.Input.VXRInputLogger.html">VXRInputLogger</a>.<a class="xref" href="Votanic.VXR2.Core.Input.VXRInputLogger.LogLevel.html">LogLevel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_AvailableControlSchemes_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.AvailableControlSchemes*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_AvailableControlSchemes" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.AvailableControlSchemes">
+  AvailableControlSchemes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Control scheme names declared on the loaded action map.
+Empty when the action map has not been initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; AvailableControlSchemes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_CompositeManager_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.CompositeManager*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_CompositeManager" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.CompositeManager">
+  CompositeManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Votanic.VXR2.Core.Input.VXRInputManager.html#Votanic_VXR2_Core_Input_VXRInputManager_CompositeManager">CompositeManager</a> that calculates composite binding values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompositeManager CompositeManager { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Votanic.VXR2.Core.Input.Composites.CompositeManager.html">CompositeManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_ControlScheme_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.ControlScheme*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_ControlScheme" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.ControlScheme">
+  ControlScheme
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The active control scheme names. An empty list selects Global (bindings with no scheme).
+A binding is used when it is Global or shares at least one scheme with this list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; ControlScheme { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_DeviceModuleManager_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.DeviceModuleManager*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_DeviceModuleManager" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.DeviceModuleManager">
+  DeviceModuleManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Votanic.VXR2.Core.Input.DeviceModules.DeviceManager.html">DeviceManager</a> that routes binding paths to registered device modules.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeviceManager DeviceModuleManager { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Votanic.VXR2.Core.Input.DeviceModules.DeviceManager.html">DeviceManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_Instance_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.Instance*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_Instance" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.Instance">
+  Instance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Singleton instance of <a class="xref" href="Votanic.VXR2.Core.Input.VXRInputManager.html">VXRInputManager</a>. Auto-located in the scene on first access.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VXRInputManager Instance { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Votanic.VXR2.Core.Input.VXRInputManager.html">VXRInputManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_InteractionManager_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.InteractionManager*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_InteractionManager" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.InteractionManager">
+  InteractionManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Votanic.VXR2.Core.Input.VXRInputManager.html#Votanic_VXR2_Core_Input_VXRInputManager_InteractionManager">InteractionManager</a> that processes interaction filters (hold, tap, press, release).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionManager InteractionManager { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Votanic.VXR2.Core.Input.Interactions.InteractionManager.html">InteractionManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_LockCursorToCenter_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.LockCursorToCenter*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_LockCursorToCenter" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.LockCursorToCenter">
+  LockCursorToCenter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When true, locks the hardware cursor to the centre of the app view during Play Mode.
+In the editor this applies only while the Game view is focused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool LockCursorToCenter { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_ProcessorManager_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.ProcessorManager*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_ProcessorManager" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.ProcessorManager">
+  ProcessorManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Votanic.VXR2.Core.Input.VXRInputManager.html#Votanic_VXR2_Core_Input_VXRInputManager_ProcessorManager">ProcessorManager</a> that applies value processors to raw input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProcessorManager ProcessorManager { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Votanic.VXR2.Core.Input.Processors.ProcessorManager.html">ProcessorManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_EditorLogAvailableInteractions_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.EditorLogAvailableInteractions*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_EditorLogAvailableInteractions" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.EditorLogAvailableInteractions">
+  EditorLogAvailableInteractions()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L1484"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs every enabled input interaction name to the Unity console. Intended for editor diagnostics.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EditorLogAvailableInteractions()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_EditorLogAvailableProcessors_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.EditorLogAvailableProcessors*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_EditorLogAvailableProcessors" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.EditorLogAvailableProcessors">
+  EditorLogAvailableProcessors()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L1441"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs every enabled input processor name to the Unity console. Intended for editor diagnostics.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EditorLogAvailableProcessors()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_GetActionEventDataPreviousFrame_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.GetActionEventDataPreviousFrame*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_GetActionEventDataPreviousFrame_System_String_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.GetActionEventDataPreviousFrame(System.String)">
+  GetActionEventDataPreviousFrame(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L619"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the action value triggered in the previous frame by action name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionEventData GetActionEventDataPreviousFrame(string actionName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Votanic.VXR2.Core.Input.ActionEventData.html">ActionEventData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_GetActionEventDataThisFrame_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.GetActionEventDataThisFrame*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_GetActionEventDataThisFrame_System_String_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.GetActionEventDataThisFrame(System.String)">
+  GetActionEventDataThisFrame(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L578"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the action value triggered in the current frame by action name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionEventData GetActionEventDataThisFrame(string actionName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Votanic.VXR2.Core.Input.ActionEventData.html">ActionEventData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_GetActionValuePreviousFrame_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.GetActionValuePreviousFrame*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_GetActionValuePreviousFrame__1_System_String_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.GetActionValuePreviousFrame``1(System.String)">
+  GetActionValuePreviousFrame&lt;T&gt;(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L631"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the typed action value triggered in the previous frame by action name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T GetActionValuePreviousFrame&lt;T&gt;(string actionName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_GetActionValueThisFrame_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.GetActionValueThisFrame*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_GetActionValueThisFrame__1_System_String_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.GetActionValueThisFrame``1(System.String)">
+  GetActionValueThisFrame&lt;T&gt;(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L590"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the typed action value triggered in the current frame by action name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T GetActionValueThisFrame&lt;T&gt;(string actionName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_GetCurrentFrameActionValues_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.GetCurrentFrameActionValues*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_GetCurrentFrameActionValues" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.GetCurrentFrameActionValues">
+  GetCurrentFrameActionValues()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L562"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get all action values triggered in the current frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, ActionEventData&gt; GetCurrentFrameActionValues()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="Votanic.VXR2.Core.Input.ActionEventData.html">ActionEventData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_GetCurrentFrameInputValues_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.GetCurrentFrameInputValues*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_GetCurrentFrameInputValues" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.GetCurrentFrameInputValues">
+  GetCurrentFrameInputValues()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L554"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get all input values polled in the current frame (for debugging).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, object&gt; GetCurrentFrameInputValues()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_GetPreviousFrameActionValues_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.GetPreviousFrameActionValues*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_GetPreviousFrameActionValues" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.GetPreviousFrameActionValues">
+  GetPreviousFrameActionValues()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L603"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get all action values triggered in the previous frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, ActionEventData&gt; GetPreviousFrameActionValues()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="Votanic.VXR2.Core.Input.ActionEventData.html">ActionEventData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_HasActionTriggeredPreviousFrame_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.HasActionTriggeredPreviousFrame*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_HasActionTriggeredPreviousFrame_System_String_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.HasActionTriggeredPreviousFrame(System.String)">
+  HasActionTriggeredPreviousFrame(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L611"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if an action was triggered in the previous frame by action name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasActionTriggeredPreviousFrame(string actionName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_HasActionTriggeredThisFrame_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.HasActionTriggeredThisFrame*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_HasActionTriggeredThisFrame_System_String_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.HasActionTriggeredThisFrame(System.String)">
+  HasActionTriggeredThisFrame(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L570"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if an action was triggered in the current frame by action name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasActionTriggeredThisFrame(string actionName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_RegisterActionEvent_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.RegisterActionEvent*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_RegisterActionEvent_System_Action_Votanic_VXR2_Core_Input_ActionEventData__" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.RegisterActionEvent(System.Action{Votanic.VXR2.Core.Input.ActionEventData})">
+  RegisterActionEvent(Action&lt;ActionEventData&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L294"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a handler for all action events.
+The handler receives an <a class="xref" href="Votanic.VXR2.Core.Input.ActionEventData.html">ActionEventData</a> on every triggered action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterActionEvent(Action&lt;ActionEventData&gt; actionEventHandler)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actionEventHandler</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Votanic.VXR2.Core.Input.ActionEventData.html">ActionEventData</a>&gt;</dt>
+    <dd><p>The callback to register.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_RegisterAction_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.RegisterAction*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_RegisterAction__1_System_String_System_Action___0__" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.RegisterAction``1(System.String,System.Action{``0})">
+  RegisterAction&lt;T&gt;(string, Action&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L333"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Register a typed callback for a specific action by name.
+Supported types: bool, float, Vector2, Vector3, Quaternion</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterAction&lt;T&gt;(string actionName, Action&lt;T&gt; callback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Votanic_VXR2_Core_Input_VXRInputManager_RegisterAction__1_System_String_System_Action___0___examples">Examples</h4>
+  <p>VXRInputManager.Instance.RegisterAction&lt;bool&gt;(&quot;Jump&quot;, OnJump);
+VXRInputManager.Instance.RegisterAction&lt;Vector2&gt;(&quot;Move&quot;, OnMove);</p>
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_ReloadDeclaredControlSchemes_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.ReloadDeclaredControlSchemes*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_ReloadDeclaredControlSchemes" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.ReloadDeclaredControlSchemes">
+  ReloadDeclaredControlSchemes()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reloads declared control scheme names from the action map file on disk.
+Active schemes that are no longer available are dropped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ReloadDeclaredControlSchemes()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the file was read and available schemes were updated.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_TriggerActionEvent_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.TriggerActionEvent*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_TriggerActionEvent_Votanic_VXR2_Core_Input_ActionEventData_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.TriggerActionEvent(Votanic.VXR2.Core.Input.ActionEventData)">
+  TriggerActionEvent(ActionEventData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L320"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manually fires an action event. Useful for relaying or simulating actions from external systems.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TriggerActionEvent(ActionEventData actionData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actionData</code> <a class="xref" href="Votanic.VXR2.Core.Input.ActionEventData.html">ActionEventData</a></dt>
+    <dd><p>The event data to dispatch.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_TriggerAction_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.TriggerAction*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_TriggerAction__1_System_String___0_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.TriggerAction``1(System.String,``0)">
+  TriggerAction&lt;T&gt;(string, T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L518"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manually trigger an action with a specific value.
+Useful for testing or programmatically triggering actions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TriggerAction&lt;T&gt;(string actionName, T value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Votanic_VXR2_Core_Input_VXRInputManager_TriggerAction__1_System_String___0__examples">Examples</h4>
+  <p>VXRInputManager.Instance.TriggerAction&lt;bool&gt;(&quot;Jump&quot;, true);
+VXRInputManager.Instance.TriggerAction&lt;Vector2&gt;(&quot;Move&quot;, new Vector2(1, 0));</p>
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_UnregisterActionEvent_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.UnregisterActionEvent*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_UnregisterActionEvent_System_Action_Votanic_VXR2_Core_Input_ActionEventData__" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.UnregisterActionEvent(System.Action{Votanic.VXR2.Core.Input.ActionEventData})">
+  UnregisterActionEvent(Action&lt;ActionEventData&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L303"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a previously registered action event handler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterActionEvent(Action&lt;ActionEventData&gt; actionEventHandler)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actionEventHandler</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Votanic.VXR2.Core.Input.ActionEventData.html">ActionEventData</a>&gt;</dt>
+    <dd><p>The callback to unregister.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_UnregisterAction_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.UnregisterAction*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_UnregisterAction__1_System_String_System_Action___0__" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.UnregisterAction``1(System.String,System.Action{``0})">
+  UnregisterAction&lt;T&gt;(string, Action&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L423"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unregister a typed callback for a specific action by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterAction&lt;T&gt;(string actionName, Action&lt;T&gt; callback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_UnregisterAllActionEvents_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.UnregisterAllActionEvents*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_UnregisterAllActionEvents" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.UnregisterAllActionEvents">
+  UnregisterAllActionEvents()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes all registered action event handlers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterAllActionEvents()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_UnregisterAllCallbacksForAction_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.UnregisterAllCallbacksForAction*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_UnregisterAllCallbacksForAction_System_String_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.UnregisterAllCallbacksForAction(System.String)">
+  UnregisterAllCallbacksForAction(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L489"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unregister all callbacks for a specific action by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterAllCallbacksForAction(string actionName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_VXRInputManager_UnregisterAllTypedCallbacks_" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.UnregisterAllTypedCallbacks*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_UnregisterAllTypedCallbacks" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.UnregisterAllTypedCallbacks">
+  UnregisterAllTypedCallbacks()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L501"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unregister all typed action callbacks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterAllTypedCallbacks()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_OnAfterInputUpdate" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.OnAfterInputUpdate">
+  OnAfterInputUpdate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fired at the end of each input update cycle, after all bindings have been processed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action OnAfterInputUpdate</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Votanic_VXR2_Core_Input_VXRInputManager_OnBeforeInputUpdate" data-uid="Votanic.VXR2.Core.Input.VXRInputManager.OnBeforeInputUpdate">
+  OnBeforeInputUpdate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fired at the start of each input update cycle, before any bindings are processed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action OnBeforeInputUpdate</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/VOTANIC/VotanicXR2_New/blob/master/src/VXR2/Scripts/Runtime/Core/Input/VXRInputManager.cs/#L25" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

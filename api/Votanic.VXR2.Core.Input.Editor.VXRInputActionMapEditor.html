@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class VXRInputActionMapEditor | VotanicXR2 Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class VXRInputActionMapEditor | VotanicXR2 Documentation ">
+      
+      <meta name="description" content="Main editor window for VXR Input Action Map configuration. Uses UI Toolkit with independent left (tree) and right (detail) panels.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VOTANIC/VotanicXR2/new/master/apiSpec/new?filename=Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor.md&amp;value=---%0Auid%3A%20Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="VotanicXR2 Documentation">
+            VotanicXR2 Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor">
+
+
+
+  <h1 id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor" class="text-break">
+Class VXRInputActionMapEditor  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2/blob/master/VotanicXR 2 Unity/Assets/Votanic/VXR2/Core/Input/Editor/VXRInputActionMapEditor.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Votanic.html">Votanic</a>.<a class="xref" href="Votanic.VXR2.html">VXR2</a>.<a class="xref" href="Votanic.VXR2.Core.html">Core</a>.<a class="xref" href="Votanic.VXR2.Core.Input.html">Input</a>.<a class="xref" href="Votanic.VXR2.Core.Input.Editor.html">Editor</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Votanic.VXR2.Core.Input.Editor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Main editor window for VXR Input Action Map configuration.
+Uses UI Toolkit with independent left (tree) and right (detail) panels.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class VXRInputActionMapEditor : EditorWindow</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Object</span></div>
+      <div><span class="xref">ScriptableObject</span></div>
+      <div><span class="xref">EditorWindow</span></div>
+      <div><span class="xref">VXRInputActionMapEditor</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <span class="xref">EditorWindow.focusedWindowChanged</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.BeginWindows()</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.EndWindows()</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.ShowNotification(GUIContent)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">EditorWindow.ShowNotification(GUIContent, double)</a>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.RemoveNotification()</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.ShowTab()</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.Focus()</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.ShowUtility()</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.ShowPopup()</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.ShowModalUtility()</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.ShowAsDropDown(Rect, Vector2)</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.Show()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">EditorWindow.Show(bool)</a>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.ShowAuxWindow()</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.ShowModal()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">EditorWindow.GetWindow(Type, bool, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">EditorWindow.GetWindow(Type, bool, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">EditorWindow.GetWindow(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">EditorWindow.GetWindow(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">EditorWindow.GetWindowWithRect(Type, Rect, bool, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">EditorWindow.GetWindowWithRect(Type, Rect, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">EditorWindow.GetWindowWithRect(Type, Rect)</a>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.GetWindow&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">EditorWindow.GetWindow&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">EditorWindow.GetWindow&lt;T&gt;(bool, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">EditorWindow.GetWindow&lt;T&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">EditorWindow.GetWindow&lt;T&gt;(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">EditorWindow.GetWindow&lt;T&gt;(bool, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">EditorWindow.GetWindow&lt;T&gt;(params Type[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">EditorWindow.GetWindow&lt;T&gt;(string, params Type[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">EditorWindow.GetWindow&lt;T&gt;(string, bool, params Type[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">EditorWindow.CreateWindow&lt;T&gt;(params Type[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">EditorWindow.CreateWindow&lt;T&gt;(string, params Type[])</a>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.HasOpenInstances&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">EditorWindow.FocusWindowIfItsOpen(Type)</a>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.FocusWindowIfItsOpen&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.GetWindowWithRect&lt;T&gt;(Rect)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">EditorWindow.GetWindowWithRect&lt;T&gt;(Rect, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">EditorWindow.GetWindowWithRect&lt;T&gt;(Rect, bool, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">EditorWindow.GetWindowWithRect&lt;T&gt;(Rect, bool, string, bool)</a>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.SaveChanges()</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.DiscardChanges()</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.Close()</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.Repaint()</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.SendEvent(Event)</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.GetExtraPaneTypes()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">EditorWindow.TryGetOverlay(string, out Overlay)</a>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.OnBackingScaleFactorChanged()</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.dataModeController</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.rootVisualElement</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.overlayCanvas</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.wantsMouseMove</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.wantsMouseEnterLeaveWindow</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.wantsLessLayoutEvents</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.autoRepaintOnSceneChange</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.maximized</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.hasFocus</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.docked</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.focusedWindow</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.mouseOverWindow</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.hasUnsavedChanges</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.saveChangesMessage</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.minSize</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.maxSize</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.title</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.titleContent</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.depthBufferBits</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.antiAlias</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.position</span>
+    </div>
+    <div>
+      <span class="xref">EditorWindow.windowFocusChanged</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableObject.SetDirty()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">ScriptableObject.CreateInstance(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">ScriptableObject.CreateInstance(Type)</a>
+    </div>
+    <div>
+      <span class="xref">ScriptableObject.CreateInstance&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetInstanceID()</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetHashCode()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">Object.InstantiateAsync&lt;T&gt;(T)</span>
+    </div>
+    <div>
+      <span class="xref">Object.InstantiateAsync&lt;T&gt;(T, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.InstantiateAsync&lt;T&gt;(T, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.InstantiateAsync&lt;T&gt;(T, Transform, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Transform)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Vector3, Quaternion)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, ReadOnlySpan&lt;Vector3&gt;, ReadOnlySpan&lt;Quaternion&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Transform, Vector3, Quaternion)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Transform, Vector3, Quaternion, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Transform, ReadOnlySpan&lt;Vector3&gt;, ReadOnlySpan&lt;Quaternion&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Transform, ReadOnlySpan&lt;Vector3&gt;, ReadOnlySpan&lt;Quaternion&gt;, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Object.InstantiateAsync&lt;T&gt;(T, InstantiateParameters, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, InstantiateParameters, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Object.InstantiateAsync&lt;T&gt;(T, Vector3, Quaternion, InstantiateParameters, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, Vector3, Quaternion, InstantiateParameters, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Object.InstantiateAsync&lt;T&gt;(T, int, ReadOnlySpan&lt;Vector3&gt;, ReadOnlySpan&lt;Quaternion&gt;, InstantiateParameters, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Scene)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, InstantiateParameters)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, InstantiateParameters)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate(Object, Transform, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate&lt;T&gt;(T, Transform, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.Destroy(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Destroy(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.DestroyImmediate(Object, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyImmediate(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type, FindObjectsSortMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type, FindObjectsInactive, FindObjectsSortMode)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DontDestroyOnLoad(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.DestroyObject(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyObject(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindSceneObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeIncludingAssets(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsByType&lt;T&gt;(FindObjectsSortMode)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectsOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsByType&lt;T&gt;(FindObjectsInactive, FindObjectsSortMode)</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindFirstObjectByType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindAnyObjectByType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindFirstObjectByType&lt;T&gt;(FindObjectsInactive)</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindAnyObjectByType&lt;T&gt;(FindObjectsInactive)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeAll(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindFirstObjectByType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindAnyObjectByType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindFirstObjectByType(Type, FindObjectsInactive)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindAnyObjectByType(Type, FindObjectsInactive)</a>
+    </div>
+    <div>
+      <span class="xref">Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">Object.name</span>
+    </div>
+    <div>
+      <span class="xref">Object.hideFlags</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_AddNewAction_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.AddNewAction*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_AddNewAction_System_String_System_Nullable_Votanic_VXR2_Core_Input_ActionType__System_Nullable_Votanic_VXR2_Core_Input_ValueType__System_Boolean_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.AddNewAction(System.String,System.Nullable{Votanic.VXR2.Core.Input.ActionType},System.Nullable{Votanic.VXR2.Core.Input.ValueType},System.Boolean)">
+  AddNewAction(string, ActionType?, ValueType?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2/blob/master/VotanicXR 2 Unity/Assets/Votanic/VXR2/Core/Input/Editor/VXRInputActionMapEditor.cs/#L548"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add a new action to the action map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddNewAction(string name = null, ActionType? actionType = null, ValueType? valueType = null, bool enabled = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Name of the action. If null, generates default name.</p>
+</dd>
+    <dt><code>actionType</code> <a class="xref" href="Votanic.VXR2.Core.Input.ActionType.html">ActionType</a>?</dt>
+    <dd><p>Action type. Defaults to OnValueChange.</p>
+</dd>
+    <dt><code>valueType</code> <a class="xref" href="Votanic.VXR2.Core.Input.ValueType.html">ValueType</a>?</dt>
+    <dd><p>Value type. Defaults to Bool.</p>
+</dd>
+    <dt><code>enabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the action is enabled. Defaults to true.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_AddNewBinding_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.AddNewBinding*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_AddNewBinding_System_String_System_String_System_String_System_String_System_String_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.AddNewBinding(System.String,System.String,System.String,System.String,System.String)">
+  AddNewBinding(string, string, string, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2/blob/master/VotanicXR 2 Unity/Assets/Votanic/VXR2/Core/Input/Editor/VXRInputActionMapEditor.cs/#L582"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddNewBinding(string name = null, string path = &quot;&quot;, string interactions = &quot;&quot;, string processors = &quot;&quot;, string controlScheme = &quot;&quot;)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>interactions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>processors</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>controlScheme</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_AddNewComposite_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.AddNewComposite*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_AddNewComposite_System_String_System_String_System_String_System_String_System_String_System_Boolean_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.AddNewComposite(System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+  AddNewComposite(string, string, string, string, string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2/blob/master/VotanicXR 2 Unity/Assets/Votanic/VXR2/Core/Input/Editor/VXRInputActionMapEditor.cs/#L639"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add a new composite binding to the currently selected action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddNewComposite(string compositeType = &quot;2DVector&quot;, string name = null, string interactions = &quot;&quot;, string processors = &quot;&quot;, string controlScheme = &quot;&quot;, bool createDefaultParts = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>compositeType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Type of composite (e.g., &quot;2DVector&quot;, &quot;1DAxis&quot;). Defaults to &quot;2DVector&quot;.</p>
+</dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Name of the composite. If null, generates default name.</p>
+</dd>
+    <dt><code>interactions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Interactions string. Defaults to empty.</p>
+</dd>
+    <dt><code>processors</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Processors string. Defaults to empty.</p>
+</dd>
+    <dt><code>controlScheme</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Control scheme. Defaults to empty.</p>
+</dd>
+    <dt><code>createDefaultParts</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to create default parts based on composite type. Defaults to true.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_CreateGUI_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.CreateGUI*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_CreateGUI" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.CreateGUI">
+  CreateGUI()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2/blob/master/VotanicXR 2 Unity/Assets/Votanic/VXR2/Core/Input/Editor/VXRInputActionMapEditor.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateGUI()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_DeleteAction_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.DeleteAction*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_DeleteAction_Votanic_VXR2_Core_Input_InputActionMap_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.DeleteAction(Votanic.VXR2.Core.Input.InputActionMap)">
+  DeleteAction(InputActionMap)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2/blob/master/VotanicXR 2 Unity/Assets/Votanic/VXR2/Core/Input/Editor/VXRInputActionMapEditor.cs/#L787"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Delete a specific action from the action map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DeleteAction(InputActionMap action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="Votanic.VXR2.Core.Input.InputActionMap.html">InputActionMap</a></dt>
+    <dd><p>The action to delete.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_DeleteBinding_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.DeleteBinding*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_DeleteBinding_Votanic_VXR2_Core_Input_InputBinding_Votanic_VXR2_Core_Input_InputActionMap_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.DeleteBinding(Votanic.VXR2.Core.Input.InputBinding,Votanic.VXR2.Core.Input.InputActionMap)">
+  DeleteBinding(InputBinding, InputActionMap)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2/blob/master/VotanicXR 2 Unity/Assets/Votanic/VXR2/Core/Input/Editor/VXRInputActionMapEditor.cs/#L812"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Delete a specific binding from its parent action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DeleteBinding(InputBinding binding, InputActionMap parentAction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>binding</code> <a class="xref" href="Votanic.VXR2.Core.Input.InputBinding.html">InputBinding</a></dt>
+    <dd><p>The binding to delete.</p>
+</dd>
+    <dt><code>parentAction</code> <a class="xref" href="Votanic.VXR2.Core.Input.InputActionMap.html">InputActionMap</a></dt>
+    <dd><p>The parent action containing this binding.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_DeleteSelectedItem_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.DeleteSelectedItem*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_DeleteSelectedItem" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.DeleteSelectedItem">
+  DeleteSelectedItem()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2/blob/master/VotanicXR 2 Unity/Assets/Votanic/VXR2/Core/Input/Editor/VXRInputActionMapEditor.cs/#L764"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Delete the currently selected item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DeleteSelectedItem()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_DuplicateSelectedItem_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.DuplicateSelectedItem*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_DuplicateSelectedItem" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.DuplicateSelectedItem">
+  DuplicateSelectedItem()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2/blob/master/VotanicXR 2 Unity/Assets/Votanic/VXR2/Core/Input/Editor/VXRInputActionMapEditor.cs/#L861"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Duplicate the currently selected item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DuplicateSelectedItem()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_ModifyAction_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.ModifyAction*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_ModifyAction_Votanic_VXR2_Core_Input_InputActionMap_System_String_System_Nullable_Votanic_VXR2_Core_Input_ActionType__System_Nullable_Votanic_VXR2_Core_Input_ValueType__System_Nullable_System_Boolean__" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.ModifyAction(Votanic.VXR2.Core.Input.InputActionMap,System.String,System.Nullable{Votanic.VXR2.Core.Input.ActionType},System.Nullable{Votanic.VXR2.Core.Input.ValueType},System.Nullable{System.Boolean})">
+  ModifyAction(InputActionMap, string, ActionType?, ValueType?, bool?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2/blob/master/VotanicXR 2 Unity/Assets/Votanic/VXR2/Core/Input/Editor/VXRInputActionMapEditor.cs/#L715"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Modify an existing action's properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ModifyAction(InputActionMap action, string name = null, ActionType? actionType = null, ValueType? valueType = null, bool? enabled = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="Votanic.VXR2.Core.Input.InputActionMap.html">InputActionMap</a></dt>
+    <dd><p>The action to modify.</p>
+</dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>New name. If null, keeps current value.</p>
+</dd>
+    <dt><code>actionType</code> <a class="xref" href="Votanic.VXR2.Core.Input.ActionType.html">ActionType</a>?</dt>
+    <dd><p>New action type. If null, keeps current value.</p>
+</dd>
+    <dt><code>valueType</code> <a class="xref" href="Votanic.VXR2.Core.Input.ValueType.html">ValueType</a>?</dt>
+    <dd><p>New value type. If null, keeps current value.</p>
+</dd>
+    <dt><code>enabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>New enabled state. If null, keeps current value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_ModifyBinding_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.ModifyBinding*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_ModifyBinding_Votanic_VXR2_Core_Input_InputBinding_System_String_System_String_System_String_System_String_System_String_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.ModifyBinding(Votanic.VXR2.Core.Input.InputBinding,System.String,System.String,System.String,System.String,System.String)">
+  ModifyBinding(InputBinding, string, string, string, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2/blob/master/VotanicXR 2 Unity/Assets/Votanic/VXR2/Core/Input/Editor/VXRInputActionMapEditor.cs/#L742"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Modify an existing binding's properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ModifyBinding(InputBinding binding, string name = null, string path = null, string interactions = null, string processors = null, string controlScheme = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>binding</code> <a class="xref" href="Votanic.VXR2.Core.Input.InputBinding.html">InputBinding</a></dt>
+    <dd><p>The binding to modify.</p>
+</dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>New name. If null, keeps current value.</p>
+</dd>
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>New path. If null, keeps current value.</p>
+</dd>
+    <dt><code>interactions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>New interactions. If null, keeps current value.</p>
+</dd>
+    <dt><code>processors</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>New processors. If null, keeps current value.</p>
+</dd>
+    <dt><code>controlScheme</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>New control scheme. If null, keeps current value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_ShowWindow_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.ShowWindow*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_ShowWindow" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.ShowWindow">
+  ShowWindow()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2/blob/master/VotanicXR 2 Unity/Assets/Votanic/VXR2/Core/Input/Editor/VXRInputActionMapEditor.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[MenuItem(&quot;VXR Input/Action Map Editor&quot;)]
+public static void ShowWindow()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_UpdateDetailPanel_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.UpdateDetailPanel*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_UpdateDetailPanel" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.UpdateDetailPanel">
+  UpdateDetailPanel()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2/blob/master/VotanicXR 2 Unity/Assets/Votanic/VXR2/Core/Input/Editor/VXRInputActionMapEditor.cs/#L531"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateDetailPanel()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_UpdateTreeView_" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.UpdateTreeView*"></a>
+
+  <h3 id="Votanic_VXR2_Core_Input_Editor_VXRInputActionMapEditor_UpdateTreeView" data-uid="Votanic.VXR2.Core.Input.Editor.VXRInputActionMapEditor.UpdateTreeView">
+  UpdateTreeView()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/VOTANIC/VotanicXR2/blob/master/VotanicXR 2 Unity/Assets/Votanic/VXR2/Core/Input/Editor/VXRInputActionMapEditor.cs/#L522"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateTreeView()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/VOTANIC/VotanicXR2/blob/master/VotanicXR 2 Unity/Assets/Votanic/VXR2/Core/Input/Editor/VXRInputActionMapEditor.cs/#L14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

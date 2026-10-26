@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace Votanic.VXR2.Core.Input | VotanicXR2 Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Votanic.VXR2.Core.Input | VotanicXR2 Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="VotanicXR2 Documentation">
+            VotanicXR2 Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Votanic.VXR2.Core.Input">
+
+  <h1 id="Votanic_VXR2_Core_Input" data-uid="Votanic.VXR2.Core.Input" class="text-break">Namespace Votanic.VXR2.Core.Input</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.ActionEventData.html">ActionEventData</a></dt>
+      <dd><p>Data payload dispatched whenever an input action triggers.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.CompositeBindingCalculator.html">CompositeBindingCalculator</a></dt>
+      <dd><p>Static utility class providing helper methods for calculating common composite binding values
+from part input dictionaries.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.ControlSchemeFormat.html">ControlSchemeFormat</a></dt>
+      <dd><p>Parses and formats the comma-separated control scheme string stored on bindings and in JSON.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.InputActionAsset.html">InputActionAsset</a></dt>
+      <dd><p>Represents the full input action asset loaded from a JSON file.
+Contains all action maps and available control schemes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.InputActionMap.html">InputActionMap</a></dt>
+      <dd><p>Defines a single input action with its type and associated bindings.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.InputBinding.html">InputBinding</a></dt>
+      <dd><p>Defines a single input binding for an action.
+Composite bindings can be defined using <a class="xref" href="Votanic.VXR2.Core.Input.InputBinding.html#Votanic_VXR2_Core_Input_InputBinding_isComposite">isComposite</a> and <a class="xref" href="Votanic.VXR2.Core.Input.InputBinding.html#Votanic_VXR2_Core_Input_InputBinding_isPartOfComposite">isPartOfComposite</a> flags.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.NoInputFoundException.html">NoInputFoundException</a></dt>
+      <dd><p>Thrown when a device module cannot provide a value for a requested binding path.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.RawInputManager.html">RawInputManager</a></dt>
+      <dd><p>Static manager for Windows Raw Input (keyboard and mouse) with background input support.
+Provides direct access to keyboard and mouse input via native Windows API.
+Works even when Unity window is not focused.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.UnknownCompositeTypeException.html">UnknownCompositeTypeException</a></dt>
+      <dd><p>Thrown when the composite manager cannot find a composite type matching the binding path.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.VXRActionBinding.html">VXRActionBinding</a></dt>
+      <dd><p>Base class for typed action bindings. Holds standard action name constants and the default value type table.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.VXRActionBinding-1.html">VXRActionBinding&lt;T&gt;</a></dt>
+      <dd><p>Typed input action binding that automatically registers and unregisters a callback
+with <a class="xref" href="Votanic.VXR2.Core.Input.VXRInputManager.html">VXRInputManager</a> based on its <a class="xref" href="Votanic.VXR2.Core.Input.VXRActionBinding.html#Votanic_VXR2_Core_Input_VXRActionBinding_Bound">Bound</a> state.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.VXRInputLogger.html">VXRInputLogger</a></dt>
+      <dd><p>Centralized logging system for VXR Input Manager.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.VXRInputManager.html">VXRInputManager</a></dt>
+      <dd><p>Input Manager for VXR framework.
+Handles input action mapping, device modules, interactions, processors, and event dispatching.
+Support 5 input types: bool, axis (a.k.a. float), Vector2, Vector3, Quaternion.
+Supports composite bindings and control schemes.
+Records action values of current and previous frames for querying.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.XInputManager.html">XInputManager</a></dt>
+      <dd><p>Static manager for XInput controller access with background input support.
+Provides direct access to Xbox controllers via native Windows XInput API.</p>
+</dd>
+    </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.ActionStateKey.html">ActionStateKey</a></dt>
+      <dd><p>Strongly-typed key for tracking action state.
+Combines action name and identifier to prevent conflicts between actions using the same binding.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.RawInputManager.KeyboardState.html">RawInputManager.KeyboardState</a></dt>
+      <dd><p>Snapshot of keyboard state for a single frame.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.RawInputManager.MouseState.html">RawInputManager.MouseState</a></dt>
+      <dd><p>Snapshot of mouse state for a single frame.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.XInputManager.ControllerCapabilities.html">XInputManager.ControllerCapabilities</a></dt>
+      <dd><p>Hardware capability information for a connected controller.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.XInputManager.ControllerState.html">XInputManager.ControllerState</a></dt>
+      <dd><p>Input state snapshot for a single controller on a given frame.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.IVXRAttachControl.html">IVXRAttachControl</a></dt>
+      <dd><p>Defines inputs for controlling attached/grabbed object manipulation — translate, rotate, directional move, and scale.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.IVXRBaseInput.html">IVXRBaseInput</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.IVXRUIInput.html">IVXRUIInput</a></dt>
+      <dd><p>Defines UI interaction inputs for interactors that support UI hover interaction.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.ActionType.html">ActionType</a></dt>
+      <dd><p>Defines when an action event is dispatched.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.VXRInputLogger.LogLevel.html">VXRInputLogger.LogLevel</a></dt>
+      <dd><p>Severity filter for input-system log messages.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.ValueType.html">ValueType</a></dt>
+      <dd><p>The data type of an action's input value.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.VirtualKeyCode.html">VirtualKeyCode</a></dt>
+      <dd><p>Virtual Key Codes for keyboard and mouse buttons
+<a href="https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes">https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.XInputButton.html">XInputButton</a></dt>
+      <dd><p>XInput button flags (can be combined with bitwise OR)</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.XInputCapabilityFlags.html">XInputCapabilityFlags</a></dt>
+      <dd><p>XInput controller capability flags</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.XInputDeviceSubtype.html">XInputDeviceSubtype</a></dt>
+      <dd><p>XInput controller subtype</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.XInputDeviceType.html">XInputDeviceType</a></dt>
+      <dd><p>XInput controller type</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.XInputError.html">XInputError</a></dt>
+      <dd><p>XInput error codes</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.XInputThumbstick.html">XInputThumbstick</a></dt>
+      <dd><p>Thumbstick selection</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Votanic.VXR2.Core.Input.XInputTrigger.html">XInputTrigger</a></dt>
+      <dd><p>Trigger selection</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

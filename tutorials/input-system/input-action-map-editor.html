@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Input Action Map Editor | VotanicXR2 Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Input Action Map Editor | VotanicXR2 Documentation ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VOTANIC/VotanicXR2_Tutorial_Documentation_Source/blob/main/tutorials/input-system/input-action-map-editor.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="VotanicXR2 Documentation">
+            VotanicXR2 Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="input-action-map-editor">
+<h1 id="input-action-map-editor">Input action map editor</h1>
+
+<p>The <strong>Input Action Map Editor</strong> allows you to define &quot;Actions&quot; (such as <em>Grab</em>, <em>Teleport</em>, or <em>Menu</em>) and bind them to specific hardware inputs across different controller profiles.</p>
+<p>Navigate to the top menu in the Unity Editor and select <code>VXR Input &gt; Action Map Editor</code> to open the editor.</p>
+<p><img src="../images/input-system/input-action-map-editor/unity-action-map-editor.png" alt=""></p>
+<hr>
+<h2 id="configure-input-action-map">Configure input action map</h2>
+<ul>
+<li>To create a new action map, select <strong>New</strong> from top right corner of the context menu.</li>
+<li>To load an existing action map, select <strong>Load</strong> from top right corner of the context menu.</li>
+<li>To save an existing action map, select <strong>Save</strong> from top right corner of the context menu.</li>
+<li>To save an existing action map as a brand new copy, select <strong>Save As</strong> from top right corner of the context menu.</li>
+</ul>
+<p><img src="../images/input-system/input-action-map-editor/vxr-input-action-map-editor-configure-action-map.png" alt=""></p>
+<h2 id="configure-actions">Configure actions</h2>
+<ul>
+<li>To create a new action, select the <span style="color:lightblue">blue</span> Add (<code>+</code>) icon in the header of action map structure column.</li>
+<li>To reorder an existing action, select the Up (<code>↑</code>) or Down (<code>↓</code>) Arrow icon of the action.</li>
+<li>To delete an existing action, select the Cross (<code>✖</code>) icon of the action.</li>
+</ul>
+<p><img src="../images/input-system/input-action-map-editor/vxr-input-action-map-editor-configure-actions.png" alt=""></p>
+<h2 id="edit-action-properties">Edit action properties</h2>
+<p>If you select an action, you can edit its properties in the <strong>Details</strong> panel on the right:</p>
+<p><img src="../images/input-system/input-action-map-editor/vxr-input-action-map-editor-edit-action-properties.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Action Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Every Frame</strong></td>
+<td style="text-align: left;">Called every frame</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>On Value Change</strong></td>
+<td style="text-align: left;">Called when the input value changes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="configure-bindings">Configure bindings</h2>
+<ul>
+<li>To add a new binding, select the <span style="color:lightgreen">green</span> Add (<code>+</code>) icon of the action.</li>
+<li>To delete an existing binding, select the Cross (<code>✖</code>) icon of the binding.</li>
+</ul>
+<p><img src="../images/input-system/input-action-map-editor/vxr-input-action-map-editor-configure-bindings.png" alt=""></p>
+<p>If you select a binding, you can edit its properties in the <strong>Details</strong> panel on the right:</p>
+<p><img src="../images/input-system/input-action-map-editor/vxr-input-action-map-editor-binding-properties.png" alt=""></p>
+<h3 id="edit-composite-bindings">Edit composite bindings</h3>
+<p>Like Unity's input system, VotanicXR2 also support composite bindings. Refer to <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.19/manual/ActionBindings.html#composite-bindings">Composite bindings</a> to learn more.</p>
+<p><img src="../images/input-system/input-action-map-editor/vxr-input-action-map-editor-composite-bindings.png" alt=""></p>
+<ul>
+<li>To add a new composite binding, select the <span style="color:lightgreen">green</span> Add (<code>+</code>) icon of the action, and select the composite binding type from the popup menu.</li>
+</ul>
+<p><img src="../images/input-system/input-action-map-editor/vxr-input-action-map-editor-add-composite-bindings.png" alt=""></p>
+<ul>
+<li>To edit the properties of a composite part, click on the composite part and use the <strong>Details</strong> panel on the right to edit its properties.</li>
+</ul>
+<p><img src="../images/input-system/input-action-map-editor/vxr-input-action-map-editor-composite-binding-properties.png" alt=""></p>
+<h3 id="edit-control-schemes">Edit control schemes</h3>
+<p>Input action assets can have multiple control schemes, which let you enable or disable different sets of bindings for your actions for different types of devices.</p>
+<ul>
+<li>To add a new control scheme, select <strong>Manage</strong> then <strong>Add New Control Scheme</strong> from the control scheme section.</li>
+</ul>
+<p><img src="../images/input-system/input-action-map-editor/vxr-input-action-map-editor-add-control-scheme.png" alt=""></p>
+<ul>
+<li>To change the control scheme of a binding, select <strong>Change</strong> then select the control scheme from the popup menu.</li>
+</ul>
+<p><img src="../images/input-system/input-action-map-editor/vxr-input-action-map-editor-change-control-scheme.png" alt=""></p>
+<ul>
+<li>To delete a control scheme, select <strong>Manage</strong> then select the control scheme from the popup menu.</li>
+</ul>
+<p><img src="../images/input-system/input-action-map-editor/vxr-input-action-map-editor-delete-control-scheme.png" alt=""></p>
+<h2 id="set-the-active-action-map-or-config-file">Set the active action map or config file</h2>
+<p>To change the the input action map used by your project, follow these steps:</p>
+<ol>
+<li>Select <strong>VXR SDK Manager</strong> in the hierarchy.</li>
+</ol>
+<p><img src="../images/input-system/input-action-map-editor/vxr-sdk-manager.png" alt=""></p>
+<ol start="2">
+<li>Go to <strong>VXR SDK Manager</strong> component:</li>
+</ol>
+<ul>
+<li>To set the active config of the project, click <strong>Select Config</strong> and pick the <code>.vxrc2</code> config file.</li>
+<li>To set the active action map of the project, click <strong>Select Action Map</strong> and pick the <code>.json</code> action map file.</li>
+</ul>
+<p><img src="../images/project-setup/getting-started/unity-vxr2-select-config-action-map.png" alt=""></p>
+<ol start="3">
+<li>Save the scene or apply the changes.</li>
+</ol>
+<!-- 1. In the **Hierarchy** window, locate `VXR SDK Manager > VXR Input Manager`.
+
+![](../images/input-system/input-action-map-editor/vxr-input-manager.png)
+
+2. Select **VXR Input Manager** to view its components in the **Inspector**.
+
+3. In the **VXR Input Manager** component, find the **Action Map File Path** field.
+
+![](../images/input-system/input-action-map-editor/vxr-input-action-map-file-path.png)
+
+4. Enter or update the path (relative to `Assets/StreamingAssets`) to the target action map file. The default map lives under `Assets/StreamingAssets/InputActionMaps/DefaultActionMap.json`.
+
+5. Save the scene or apply the changes. -->
+<h2 id="set-the-active-control-scheme">Set the active control scheme</h2>
+<p>Once you set an action map in the input manager, you can enable or disable the sets of bindings to use by configuring the active control scheme:</p>
+<p><img src="../images/input-system/input-action-map-editor/vxr-active-control-scheme.png" alt=""></p>
+<p>To actively test your XR application during development, enable the control scheme that matches your testing hardware and environment. These control schemes are provided in the default action map:</p>
+<ul>
+<li><strong>PC</strong> control scheme for local PC testing</li>
+<li><strong>HMD</strong> control scheme for Head-mounted display testing</li>
+<li><strong>CAVE</strong> control scheme for testing in Votanic CAVE systems</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/VOTANIC/VotanicXR2_Tutorial_Documentation_Source/blob/main/tutorials/input-system/input-action-map-editor.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

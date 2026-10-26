@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Getting Started | VotanicXR2 Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Getting Started | VotanicXR2 Documentation ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VOTANIC/VotanicXR2_Tutorial_Documentation_Source/blob/main/tutorials/project-setup/getting-started.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="VotanicXR2 Documentation">
+            VotanicXR2 Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="getting_started">
+
+
+<div class="WARNING">
+<h5>Warning</h5>
+<ul>
+<li>Default resource folder github link is not working</li>
+</ul>
+</div>
+<h1 id="getting-started-with-votanicxr2">Getting Started with VotanicXR2</h1>
+<p>This guide describes the initial setup of the VotanicXR2 SDK. By the end of this page, you will have a configured Unity project with core VotanicXR2 features initialized and ready for development.</p>
+<hr>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before importing the SDK, ensure your development environment meets the following requirements:</p>
+<ul>
+<li><strong>Unity Version:</strong> <code>Unity 6000.0.82f1 LTS</code> or newer</li>
+<li><strong>Render Pipeline:</strong> Universal Render Pipeline</li>
+</ul>
+<hr>
+<h2 id="create-new-unity-project">Create new Unity project</h2>
+<ol>
+<li>Choose a compatible Unity editor version, such as <code>Unity 6000.0.82f1 LTS</code></li>
+</ol>
+<p><img src="../images/project-setup/getting-started/select-unity-version.png" alt=""></p>
+<ol start="2">
+<li>For your chosen Unity version, select the <code>Universal 3D</code> template when you create new project.</li>
+</ol>
+<p><img src="../images/project-setup/getting-started/select-urp3d.png" alt=""></p>
+<hr>
+<!-- ## Install necessary dependencies
+
+VotanicXR2 requires specific Unity framework packages to function. These must be installed via the Unity Package Manager before or immediately after importing the SDK.
+
+1. In the Unity Editor, navigate to `Window > Package Manager`.
+
+![](../images/project-setup/getting-started/unity-package-manager.png)
+
+2. In the Package Manager window, change the registry to **Unity Registry** (via the dropdown in the top-left) and install the following:
+- **XR Hands:** `1.7.3` or newer
+- **XR Interaction Toolkit:** `3.2.2` or newer
+
+![](../images/project-setup/getting-started/unity-install-packages.png)
+
+--- -->
+<h2 id="import-sdk-unitypackage">Import SDK unitypackage</h2>
+<p>When you import the VotanicXR2 SDK, the following packages are also installed automatically as dependecies:</p>
+<ul>
+<li><strong>XR Hands:</strong> <code>1.7.3</code> or newer</li>
+<li><strong>XR Interaction Toolkit:</strong> <code>3.2.2</code> or newer</li>
+</ul>
+<!-- Choose one of the following ways to import the VotanicXR2 SDK package into your project:
+
+### Import with git URL -->
+<p>To import the VotanicXR2 SDK package into your project:</p>
+<ol>
+<li><p>Select <code>Window &gt; Package Manager</code>.</p>
+</li>
+<li><p>In the Package Manager, select the <code>+</code> button and choose <code>Install package from git URL</code>.</p>
+</li>
+</ol>
+<p><img src="../images/project-setup/getting-started/unity-install-packages-with-git-url.png" alt=""></p>
+<ol start="3">
+<li>Copy and paste the SDK git url (<a href="https://github.com/VOTANIC/VotanicXR2-SDK-Unity.git?path=/Unity6">https://github.com/VOTANIC/VotanicXR2-SDK-Unity.git?path=/Unity6</a>) into the text box then click <code>Install</code>. Unity will automatically fetch and install the SDK for the project.</li>
+</ol>
+<!-- ### Import with VotanicXR Suite
+
+The VotanicXR2 SDK is distributed as a `.unitypackage` and is available through the **VotanicXR Suite**.
+
+1. Open the **VotanicXR Suite** and select **Unity SDK**. This will open the folder containing the available SDK variations.
+
+![Votanic Suite Import SDK](../images/project-setup/getting-started/votanic-suite-import-sdk.png)
+
+2. VotanicXR2 provides specific packages optimized for different Unity versions. Please select the package that matches your project setup from the table below:
+
+| Unity Version | SDK Package Name |
+| :--- | :--- |
+| **6000.0.82f1 LTS** | `VXR2_XXXX.unitypackage` |
+
+3. With your Unity project open, navigate to the top menu: `Assets > Import Package > Custom Package...`.
+
+![](../images/project-setup/getting-started/unity-import-custom-package.png)
+
+4. Browse to the folder located in **Step 1** and select your chosen `.unitypackage`.
+
+5. An **Import Unity Package** window will appear. Ensure all items are checked and click **Import**.
+
+![](../images/project-setup/getting-started/unity-import-package-dialog.png) -->
+<hr>
+<h2 id="set-up-the-unity-scene">Set up the Unity scene</h2>
+<p>At a minimum, a scene needs the following to work with VXR2 SDK:</p>
+<ul>
+<li><strong>VXR SDK Manager</strong></li>
+<li><strong>VXR Start Point</strong></li>
+</ul>
+<p>You can either set up the scene by:</p>
+<ul>
+<li>Using one of the provided sample scene, or</li>
+<li>Creating a new scene and manually add in the required components</li>
+</ul>
+<h3 id="start-with-a-sample-scene">Start with a sample scene</h3>
+<p>To set up a proper VXR2 scene, go into or duplicate one of the <a href="../samples/sample-scenes.html">sample scenes</a> and modify them to suit your project need.</p>
+<h3 id="start-with-a-new-scene">Start with a new scene</h3>
+<p>To set up a proper VXR2 scene using a new scene, do the followings:</p>
+<ol>
+<li><p>Create a new Unity scene.</p>
+</li>
+<li><p>In the hierarchy, right-click and select <code>Votanic XR 2 &gt; Spawn SDK Manager</code> and then select <code>Votanic XR 2 &gt; Spawn Start Point</code>. You should see both the <strong>VXR SDK Manager</strong> and <strong>VXR Start Point</strong> spawned within the project.</p>
+</li>
+</ol>
+<p><img src="../images/project-setup/getting-started/unity-vxr2-spawn-things.png" alt=""></p>
+<ol start="3">
+<li>Select <strong>VXR Start Point</strong> in the hierarchy and place it to where the user should appear in the scene.</li>
+</ol>
+<p><img src="../images/project-setup/getting-started/unity-vxr2-spawn-things-result.png" alt=""></p>
+<hr>
+<h2 id="set-up-project-config-and-action-map">Set up project config and action map</h2>
+<ol>
+<li><p>Download the default <code>.vxr2</code> project config and <code>.json</code> action map from <a href="https://github.com/VOTANIC/VotanicXR2-SDK-Unity/tree/main/Default_Resources">default resources folder</a> on SDK github page.</p>
+</li>
+<li><p>Place the downloaded files under <code>StreamingAssets</code> folder in the project hierarchy.</p>
+</li>
+</ol>
+<p><img src="../images/project-setup/getting-started/unity-vxr2-streaming-assets.png" alt=""></p>
+<ol start="3">
+<li><p>Select <strong>VXR SDK Manager</strong> in the hierarchy.</p>
+</li>
+<li><p>Go to <strong>VXR SDK Manager</strong> component:</p>
+</li>
+</ol>
+<ul>
+<li>To set the active config of the project, click <strong>Select Config</strong> and pick the <code>.vxrc2</code> config file.</li>
+<li>To set the active action map of the project, click <strong>Select Action Map</strong> and pick the <code>.json</code> action map file.</li>
+</ul>
+<p><img src="../images/project-setup/getting-started/unity-vxr2-select-config-action-map.png" alt=""></p>
+<hr>
+<h2 id="configure-project-settings">Configure project settings</h2>
+<!-- ### Apply project settings -->
+<ol>
+<li>Navigate to the top menu and select <code>Edit &gt; Project Settings...</code>.</li>
+</ol>
+<p><img src="../images/project-setup/getting-started/unity-project-settings.png" alt=""></p>
+<ol start="2">
+<li>Select <code>Votanic &gt; VXR2</code> category.</li>
+</ol>
+<p><img src="../images/project-setup/getting-started/unity-vxr2-project-setting.png" alt=""></p>
+<ol start="3">
+<li>Click on both <strong>Use Votanic VXR2 Render Pipeline Asset</strong> and <strong>Disable DXGI</strong> to apply the settings.</li>
+</ol>
+<p><img src="../images/project-setup/getting-started/unity-vxr2-project-setting-buttons.png" alt=""></p>
+<ol start="4">
+<li>Navigate to <code>XR Plug-in Management</code>.</li>
+</ol>
+<p><img src="../images/project-setup/getting-started/unity-xr-plugin-management.png" alt=""></p>
+<ol start="5">
+<li>Tick <code>OpenXR</code> checkbox.</li>
+</ol>
+<p><img src="../images/project-setup/getting-started/unity-tick-openxr-setting.png" alt=""></p>
+<!-- ### Enable unsafe code
+
+1. In the search bar at the top-right of the Project Settings window, type **"unsafe"**. This will instantly filter the relevant section under the **Player** category.
+
+2. Locate the **Allow 'unsafe' Code** checkbox and ensure it is checked for your active build target.
+
+![](../images/project-setup/getting-started/unity-unsafe-code.png)
+
+--- -->
+<hr>
+<h2 id="activate-the-license-key">Activate the license key</h2>
+<ol>
+<li>Launch the <strong>VotanicXR Suite</strong> and select <strong>License Manager</strong>.</li>
+</ol>
+<p><img src="../images/project-setup/getting-started/votanic-suite-license-manager.png" alt=""></p>
+<ol start="2">
+<li>Select <strong>Activate</strong> on the bottom-left corner.</li>
+</ol>
+<p><img src="../images/project-setup/getting-started/votanic-suite-license-manager-select-activate.png" alt=""></p>
+<ol start="3">
+<li>Input license key in the textbox then press <strong>Activation</strong>. The newly activated license will be shown in the <code>App List</code>.</li>
+</ol>
+<p><img src="../images/project-setup/getting-started/votanic-suite-license-manager-enter-key.png" alt=""></p>
+<hr>
+<h2 id="verify-installation">Verify installation</h2>
+<p>To verify that VotanicXR2 SDK and its dependencies are configured correctly, do the followings:</p>
+<ol>
+<li>Click <strong>Play</strong> button at the top of Unity Editor to run the scene.</li>
+<li>Test the default controls:
+<ul>
+<li><strong>For PC:</strong> <code>WASD</code> to move, <code>Mouse</code> to look, <code>Space</code> to select</li>
+<li><strong>For HMD:</strong> <code>LS</code> to move, <code>RS</code> to snap turn, <code>Right Trigger</code> to select</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="next-steps">Next steps</h2>
+<p>Now that you have verified your setup, you can begin building your XR projects with other SDK features:</p>
+<ul>
+<li><a href="../interaction/interaction-overview.html"><strong>Interaction Framework:</strong> Understanding Interactors and Interactables</a></li>
+<li><a href="../locomotion/locomotion-overview.html"><strong>Locomotion:</strong> Setting up Teleportation and Smooth Movement</a></li>
+<li><a href="../input-system/input-system-overview.html"><strong>VXR2 Input System:</strong> Customizing Action Maps</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/VOTANIC/VotanicXR2_Tutorial_Documentation_Source/blob/main/tutorials/project-setup/getting-started.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

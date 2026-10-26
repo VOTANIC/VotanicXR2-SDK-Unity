@@ -1,0 +1,2893 @@
+{
+  "docfx_version": "2.81.0+ba844df625370a6bd7c1ecab0d0ec4d1d9128ac4",
+  "source_base_path": "C:/Users/PC/Project/VotanicXR2_Tutorial_Documentation_Source",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.CameraMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.CameraMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.CameraMode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Fader.FadePass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Fader.FadePass.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Fader.FadePass",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Fader.FadePass.yml\" sourcestartlinenumber=\"1\">URP render pass that blits the camera color buffer through a fade material.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Fader.WorldFader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Fader.WorldFader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Fader.WorldFader",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Fader.WorldFader.yml\" sourcestartlinenumber=\"1\">Full-screen world fade effect for the vXR2 render pipeline.\nApplies a color overlay via URP and supports optional exclusion of transparent or opaque objects.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Fader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Fader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Fader",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.ActionEventData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.ActionEventData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.ActionEventData",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.ActionEventData.yml\" sourcestartlinenumber=\"1\">Data payload dispatched whenever an input action triggers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.ActionStateKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.ActionStateKey.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.ActionStateKey",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.ActionStateKey.yml\" sourcestartlinenumber=\"1\">Strongly-typed key for tracking action state.\nCombines action name and identifier to prevent conflicts between actions using the same binding.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.ActionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.ActionType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.ActionType",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.ActionType.yml\" sourcestartlinenumber=\"1\">Defines when an action event is dispatched.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.CompositeBindingCalculator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.CompositeBindingCalculator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.CompositeBindingCalculator",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.CompositeBindingCalculator.yml\" sourcestartlinenumber=\"1\">Static utility class providing helper methods for calculating common composite binding values\nfrom part input dictionaries.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Composites.Axis1DComposite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Composites.Axis1DComposite.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Composites.Axis1DComposite",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Composites.Axis1DComposite.yml\" sourcestartlinenumber=\"1\">1D axis composite — combines two boolean bindings (positive/negative) into a single float axis value.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Composites.Axis2DComposite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Composites.Axis2DComposite.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Composites.Axis2DComposite",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Composites.Axis2DComposite.yml\" sourcestartlinenumber=\"1\">2D axis composite — combines two float axis bindings (x/y) into a UnityEngine.Vector2.\nAnalog magnitude is preserved; missing parts default to 0.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Composites.Axis3DComposite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Composites.Axis3DComposite.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Composites.Axis3DComposite",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Composites.Axis3DComposite.yml\" sourcestartlinenumber=\"1\">3D axis composite — combines three float axis bindings (x/y/z) into a UnityEngine.Vector3.\nAnalog magnitude is preserved; missing parts default to 0.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Composites.CompositeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Composites.CompositeAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Composites.CompositeAttribute",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Composites.CompositeAttribute.yml\" sourcestartlinenumber=\"1\">Attribute to mark a class as a composite binding type.\nThe composite name is used to identify the composite in binding configurations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Composites.CompositeManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Composites.CompositeManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Composites.CompositeManager",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Composites.CompositeManager.yml\" sourcestartlinenumber=\"1\">Manages all composite binding types in the system.\nAutomatically discovers and registers composites marked with [Composite] attribute.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Composites.ICompositeValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Composites.ICompositeValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Composites.ICompositeValue",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Composites.ICompositeValue.yml\" sourcestartlinenumber=\"1\">Base interface for all composite binding types.\nComposite bindings combine multiple input values into a single output value.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Composites.LookRotationComposite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Composites.LookRotationComposite.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Composites.LookRotationComposite",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Composites.LookRotationComposite.yml\" sourcestartlinenumber=\"1\">Look-rotation composite — accumulates a Vector2 delta (e.g. mouse movement) into yaw/pitch\nand outputs a UnityEngine.Quaternion. Designed for mouse-look camera control.\nPitch is clamped to avoid gimbal lock; yaw is wrapped to avoid float overflow.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Composites.OneModifierComposite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Composites.OneModifierComposite.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Composites.OneModifierComposite",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Composites.OneModifierComposite.yml\" sourcestartlinenumber=\"1\">One-modifier composite — combines a modifier binding and a main binding; outputs <a href=\"https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool\">true</a> only when both are pressed simultaneously.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Composites.QuaternionComposite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Composites.QuaternionComposite.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Composites.QuaternionComposite",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Composites.QuaternionComposite.yml\" sourcestartlinenumber=\"1\">Quaternion composite — combines three float axis bindings (x/y/z Euler angles in degrees) into a UnityEngine.Quaternion.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Composites.TwoModifiersComposite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Composites.TwoModifiersComposite.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Composites.TwoModifiersComposite",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Composites.TwoModifiersComposite.yml\" sourcestartlinenumber=\"1\">Two-modifiers composite — combines two modifier bindings and a main binding; outputs <a href=\"https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool\">true</a> only when all three are pressed simultaneously.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Composites.Vector2DComposite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Composites.Vector2DComposite.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Composites.Vector2DComposite",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Composites.Vector2DComposite.yml\" sourcestartlinenumber=\"1\">2D vector composite — combines four boolean directional bindings (up/down/left/right) into a normalized UnityEngine.Vector2.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Composites.Vector3DComposite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Composites.Vector3DComposite.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Composites.Vector3DComposite",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Composites.Vector3DComposite.yml\" sourcestartlinenumber=\"1\">3D vector composite — combines six boolean directional bindings (up/down/left/right/forward/back) into a normalized UnityEngine.Vector3.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Composites.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Composites.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Composites",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.ControlSchemeFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.ControlSchemeFormat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.ControlSchemeFormat",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.ControlSchemeFormat.yml\" sourcestartlinenumber=\"1\">Parses and formats the comma-separated control scheme string stored on bindings and in JSON.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.ConstantDeviceModule.ControlPathInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.ConstantDeviceModule.ControlPathInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.ConstantDeviceModule.ControlPathInfo",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.DeviceModules.ConstantDeviceModule.ControlPathInfo.yml\" sourcestartlinenumber=\"1\">Information about a constant control path including its value type and getter.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.ConstantDeviceModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.ConstantDeviceModule.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.ConstantDeviceModule",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.DeviceModules.ConstantDeviceModule.yml\" sourcestartlinenumber=\"1\">Device module that exposes constant identity values for each <xref href=\"Votanic.VXR2.Core.Input.ValueType\" data-throw-if-not-resolved=\"false\"></xref>.\nPair a constant path with binding processors (offset, rotate, invert) to produce any desired value.\nSupports path format: <code>&lt;Constant&gt;/False|True|Axis|Vector2|Vector3|Quaternion</code>.\nExamples:</p>\n<ul sourcefile=\"api/Votanic.VXR2.Core.Input.DeviceModules.ConstantDeviceModule.yml\" sourcestartlinenumber=\"5\">\n<li sourcefile=\"api/Votanic.VXR2.Core.Input.DeviceModules.ConstantDeviceModule.yml\" sourcestartlinenumber=\"5\"><code>&lt;Constant&gt;/True</code></li>\n<li sourcefile=\"api/Votanic.VXR2.Core.Input.DeviceModules.ConstantDeviceModule.yml\" sourcestartlinenumber=\"6\"><code>&lt;Constant&gt;/Axis</code> with processor <code>offset(value=0.5)</code></li>\n<li sourcefile=\"api/Votanic.VXR2.Core.Input.DeviceModules.ConstantDeviceModule.yml\" sourcestartlinenumber=\"7\"><code>&lt;Constant&gt;/Vector3</code> with processor <code>offset(x=0,y=1,z=0)</code></li>\n<li sourcefile=\"api/Votanic.VXR2.Core.Input.DeviceModules.ConstantDeviceModule.yml\" sourcestartlinenumber=\"8\"><code>&lt;Constant&gt;/Quaternion</code> with processor <code>rotate(x=0,y=90,z=0)</code></li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.DeviceManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.DeviceManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.DeviceManager",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.DeviceModules.DeviceManager.yml\" sourcestartlinenumber=\"1\">Manages multiple device modules and routes input bindings to the appropriate module.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.DeviceModuleAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.DeviceModuleAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.DeviceModuleAttribute",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.DeviceModules.DeviceModuleAttribute.yml\" sourcestartlinenumber=\"1\">Attribute to mark classes as device modules that should be automatically loaded.\nUse this to explicitly register device modules for reflection-based loading.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.DeviceModuleBase.BindingPathEditorButton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.DeviceModuleBase.BindingPathEditorButton.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.DeviceModuleBase.BindingPathEditorButton",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.DeviceModules.DeviceModuleBase.BindingPathEditorButton.yml\" sourcestartlinenumber=\"1\">Represents a single selectable binding path button in the input binding editor UI.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.DeviceModuleBase.BindingPathEditorButtonGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.DeviceModuleBase.BindingPathEditorButtonGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.DeviceModuleBase.BindingPathEditorButtonGroup",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.DeviceModules.DeviceModuleBase.BindingPathEditorButtonGroup.yml\" sourcestartlinenumber=\"1\">Represents a tab group in the input binding selection UI.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.DeviceModuleBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.DeviceModuleBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.DeviceModuleBase",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.HandTrackingDeviceModule.HandTrackingPropertyType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.HandTrackingDeviceModule.HandTrackingPropertyType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.HandTrackingDeviceModule.HandTrackingPropertyType",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.DeviceModules.HandTrackingDeviceModule.HandTrackingPropertyType.yml\" sourcestartlinenumber=\"1\">Specifies the property type to retrieve from hand tracking</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.HandTrackingDeviceModule.HandType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.HandTrackingDeviceModule.HandType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.HandTrackingDeviceModule.HandType",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.DeviceModules.HandTrackingDeviceModule.HandType.yml\" sourcestartlinenumber=\"1\">Specifies which hand to track</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.HandTrackingDeviceModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.HandTrackingDeviceModule.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.HandTrackingDeviceModule",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.OSCDeviceModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.OSCDeviceModule.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.OSCDeviceModule",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.DeviceModules.OSCDeviceModule.yml\" sourcestartlinenumber=\"1\">Device module for OSC (Open Sound Control) input.\nSupported binding path format: &lt;OSC&gt;/{port}/{osc/address}.\nInput value type is determined dynamically from incoming OSC messages.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.RawInputDeviceModule.ControlPathInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.RawInputDeviceModule.ControlPathInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.RawInputDeviceModule.ControlPathInfo",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.DeviceModules.RawInputDeviceModule.ControlPathInfo.yml\" sourcestartlinenumber=\"1\">Information about a control path including its type and how to read it</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.RawInputDeviceModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.RawInputDeviceModule.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.RawInputDeviceModule",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.UnityDeviceModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.UnityDeviceModule.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.UnityDeviceModule",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.DeviceModules.UnityDeviceModule.yml\" sourcestartlinenumber=\"1\">Unity Input System device module.\nHandles standard Unity input devices (Keyboard, Mouse, Gamepad, XRHMD, XRController etc.).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.VRPNDeviceModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.VRPNDeviceModule.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.VRPNDeviceModule",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.VirtualDeviceConfig.CompositePartMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.VirtualDeviceConfig.CompositePartMapping.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.VirtualDeviceConfig.CompositePartMapping",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.VirtualDeviceConfig.VirtualMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.VirtualDeviceConfig.VirtualMapping.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.VirtualDeviceConfig.VirtualMapping",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.VirtualDeviceConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.VirtualDeviceConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.VirtualDeviceConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.VirtualDeviceModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.VirtualDeviceModule.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.VirtualDeviceModule",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.ViveTrackerDeviceModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.ViveTrackerDeviceModule.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.ViveTrackerDeviceModule",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.XInputDeviceModule.ControlPathInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.XInputDeviceModule.ControlPathInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.XInputDeviceModule.ControlPathInfo",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.DeviceModules.XInputDeviceModule.ControlPathInfo.yml\" sourcestartlinenumber=\"1\">Information about a control path including its type and how to read it</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.XInputDeviceModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.XInputDeviceModule.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.XInputDeviceModule",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.XRDeviceModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.XRDeviceModule.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules.XRDeviceModule",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.DeviceModules.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.DeviceModules",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.IVXRAttachControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.IVXRAttachControl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.IVXRAttachControl",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.IVXRAttachControl.yml\" sourcestartlinenumber=\"1\">Defines inputs for controlling attached/grabbed object manipulation — translate, rotate, directional move, and scale.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.IVXRBaseInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.IVXRBaseInput.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.IVXRBaseInput",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.IVXRUIInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.IVXRUIInput.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.IVXRUIInput",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.IVXRUIInput.yml\" sourcestartlinenumber=\"1\">Defines UI interaction inputs for interactors that support UI hover interaction.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.InputActionAsset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.InputActionAsset.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.InputActionAsset",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.InputActionAsset.yml\" sourcestartlinenumber=\"1\">Represents the full input action asset loaded from a JSON file.\nContains all action maps and available control schemes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.InputActionMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.InputActionMap.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.InputActionMap",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.InputActionMap.yml\" sourcestartlinenumber=\"1\">Defines a single input action with its type and associated bindings.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.InputBinding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.InputBinding.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.InputBinding",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.InputBinding.yml\" sourcestartlinenumber=\"1\">Defines a single input binding for an action.\nComposite bindings can be defined using <xref href=\"Votanic.VXR2.Core.Input.InputBinding.isComposite\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Votanic.VXR2.Core.Input.InputBinding.isPartOfComposite\" data-throw-if-not-resolved=\"false\"></xref> flags.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Interactions.BoundInteraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Interactions.BoundInteraction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Interactions.BoundInteraction",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Interactions.BoundInteraction.yml\" sourcestartlinenumber=\"1\">A pre-instantiated interaction bound to a specific binding, with its own independent state.\nBuilt once during initialization — never shared between bindings.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Interactions.HoldInteraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Interactions.HoldInteraction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Interactions.HoldInteraction",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Interactions.HoldInteraction.yml\" sourcestartlinenumber=\"1\">Hold interaction - triggers after holding for a duration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Interactions.IInteractionProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Interactions.IInteractionProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Interactions.IInteractionProcessor",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Interactions.IInteractionProcessor.yml\" sourcestartlinenumber=\"1\">Interface for interaction processors that determine when an action should trigger.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Interactions.InputInteractionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Interactions.InputInteractionAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Interactions.InputInteractionAttribute",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Interactions.InputInteractionAttribute.yml\" sourcestartlinenumber=\"1\">Attribute to mark interaction processors for automatic registration via reflection.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Interactions.InteractionContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Interactions.InteractionContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Interactions.InteractionContext",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Interactions.InteractionContext.yml\" sourcestartlinenumber=\"1\">Context data passed to interaction processors.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Interactions.InteractionManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Interactions.InteractionManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Interactions.InteractionManager",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Interactions.InteractionManager.yml\" sourcestartlinenumber=\"1\">Manages interaction processors and handles interaction processing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Interactions.InteractionParameterDefinition.ParameterType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Interactions.InteractionParameterDefinition.ParameterType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Interactions.InteractionParameterDefinition.ParameterType",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Interactions.InteractionParameterDefinition.ParameterType.yml\" sourcestartlinenumber=\"1\">Supported editor field types for interaction parameters.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Interactions.InteractionParameterDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Interactions.InteractionParameterDefinition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Interactions.InteractionParameterDefinition",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Interactions.InteractionParameterDefinition.yml\" sourcestartlinenumber=\"1\">Parameter definition for interaction editors.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Interactions.PressInteraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Interactions.PressInteraction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Interactions.PressInteraction",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Interactions.PressInteraction.yml\" sourcestartlinenumber=\"1\">Press interaction - triggers on button press down.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Interactions.ReleaseInteraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Interactions.ReleaseInteraction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Interactions.ReleaseInteraction",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Interactions.ReleaseInteraction.yml\" sourcestartlinenumber=\"1\">Release interaction - triggers on button release.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Interactions.TapInteraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Interactions.TapInteraction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Interactions.TapInteraction",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Interactions.TapInteraction.yml\" sourcestartlinenumber=\"1\">Tap interaction - triggers on quick press and release.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Interactions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Interactions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Interactions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.NoInputFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.NoInputFoundException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.NoInputFoundException",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.NoInputFoundException.yml\" sourcestartlinenumber=\"1\">Thrown when a device module cannot provide a value for a requested binding path.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.AxisDeadzoneProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.AxisDeadzoneProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.AxisDeadzoneProcessor",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.AxisDeadzoneProcessor.yml\" sourcestartlinenumber=\"1\">Per-axis deadzone filter for Axis, Vector2, and Vector3 inputs.\nEach component is processed independently so a joystick can behave like a D-pad.\nParameters: inner (threshold 0-1, default 0.125), outer (threshold 0-1, default 1.0)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.BoundProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.BoundProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.BoundProcessor",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.BoundProcessor.yml\" sourcestartlinenumber=\"1\">A pre-instantiated processor bound to a specific binding, with its own independent state.\nBuilt once during initialization — never shared between bindings.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.ClampProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.ClampProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.ClampProcessor",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.ClampProcessor.yml\" sourcestartlinenumber=\"1\">Clamps values to a min/max range.\nParameters: min, max</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.CoordinateRemapProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.CoordinateRemapProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.CoordinateRemapProcessor",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.CoordinateRemapProcessor.yml\" sourcestartlinenumber=\"1\">Remaps coordinate system axes to Unity's coordinate system (Right=+X, Up=+Y, Forward=+Z, Left-Handed).\nDefine which source axes map to Unity's Right/Up/Forward to convert between coordinate systems.</p>\n<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.CoordinateRemapProcessor.yml\" sourcestartlinenumber=\"4\">Uses direct matrix transformation:</p>\n<ul sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.CoordinateRemapProcessor.yml\" sourcestartlinenumber=\"5\">\n<li sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.CoordinateRemapProcessor.yml\" sourcestartlinenumber=\"5\">For Vector3: v' = C * v (where C is the conversion matrix)</li>\n<li sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.CoordinateRemapProcessor.yml\" sourcestartlinenumber=\"6\">For Quaternion: M' = C * M * C^T (similarity transform on rotation matrix)</li>\n</ul>\n<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.CoordinateRemapProcessor.yml\" sourcestartlinenumber=\"8\">The conversion matrix and its transpose are computed once on first use and cached for performance.\nThe matrix is built from axis mappings where each column represents where Unity's axis comes from\nin the source coordinate system. Handedness is automatically handled via matrix determinant\n(det=-1 indicates handedness flip).</p>\n<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.CoordinateRemapProcessor.yml\" sourcestartlinenumber=\"13\">Parameters: right, up, forward (axis mappings like &quot;+x&quot;, &quot;-y&quot;, &quot;+z&quot;, etc.)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.IValueProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.IValueProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.IValueProcessor",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.IValueProcessor.yml\" sourcestartlinenumber=\"1\">Interface for value processors that transform input values.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.InputProcessorAttribute.SupportedValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.InputProcessorAttribute.SupportedValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.InputProcessorAttribute.SupportedValue",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.InputProcessorAttribute.SupportedValue.yml\" sourcestartlinenumber=\"1\">Bitmask flags that identify which input value types a processor can handle.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.InputProcessorAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.InputProcessorAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.InputProcessorAttribute",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.InputProcessorAttribute.yml\" sourcestartlinenumber=\"1\">Attribute to mark value processors for automatic registration via reflection.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.InvertProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.InvertProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.InvertProcessor",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.InvertProcessor.yml\" sourcestartlinenumber=\"1\">Inverts values. Supports per-axis inversion for Vector2/Vector3.\nParameters: x, y, z (true/false for Vector2/Vector3)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.MovingAverageProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.MovingAverageProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.MovingAverageProcessor",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.MovingAverageProcessor.yml\" sourcestartlinenumber=\"1\">Moving average filter - smooths input by averaging over N recent samples.\nParameters: windowSize (number of samples, default 5)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.NormalizeProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.NormalizeProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.NormalizeProcessor",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.NormalizeProcessor.yml\" sourcestartlinenumber=\"1\">Normalizes Vector2/Vector3 values to unit length.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.OffsetProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.OffsetProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.OffsetProcessor",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.OffsetProcessor.yml\" sourcestartlinenumber=\"1\">Adds an offset to values. Supports uniform offset for Axis and per-axis offset for Vector2/Vector3.\nParameters: value (Axis uniform offset), or x, y, z (per-axis for Vector2/Vector3)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.OneEuroFilterProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.OneEuroFilterProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.OneEuroFilterProcessor",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.OneEuroFilterProcessor.yml\" sourcestartlinenumber=\"1\">One Euro Filter - adaptive low-pass filter that's responsive when moving, smooth when still.\nExcellent for VR/AR tracking and motion input.\nParameters: minCutoff (default 1.0), beta (default 0.007), dCutoff (default 1.0)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.ProcessorContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.ProcessorContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.ProcessorContext",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.ProcessorContext.yml\" sourcestartlinenumber=\"1\">Context data passed to value processors.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.ProcessorManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.ProcessorManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.ProcessorManager",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.ProcessorManager.yml\" sourcestartlinenumber=\"1\">Manages value processors and handles value processing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.ProcessorParameterDefinition.ParameterType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.ProcessorParameterDefinition.ParameterType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.ProcessorParameterDefinition.ParameterType",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.ProcessorParameterDefinition.ParameterType.yml\" sourcestartlinenumber=\"1\">The data type of an editable processor parameter.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.ProcessorParameterDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.ProcessorParameterDefinition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.ProcessorParameterDefinition",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.ProcessorParameterDefinition.yml\" sourcestartlinenumber=\"1\">Definition of a processor parameter for editor use.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.RadialDeadzoneProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.RadialDeadzoneProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.RadialDeadzoneProcessor",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.RadialDeadzoneProcessor.yml\" sourcestartlinenumber=\"1\">Radial deadzone filter - creates circular deadzone for 2D inputs (thumbsticks).\nParameters: inner (inner radius 0-1, default 0.125), outer (outer radius 0-1, default 1.0)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.RotateProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.RotateProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.RotateProcessor",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.RotateProcessor.yml\" sourcestartlinenumber=\"1\">Rotates values by specified angles. Supports 2D rotation by angle for Vector2,\neuler rotation for Vector3, and local-space euler offset for Quaternion.\nParameters: angle (Vector2 rotation in degrees), or x, y, z euler angles (Vector3/Quaternion)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.ScaleProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.ScaleProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors.ScaleProcessor",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.Processors.ScaleProcessor.yml\" sourcestartlinenumber=\"1\">Scales values by a factor. Supports uniform and per-axis scaling.\nParameters: factor (uniform), or x, y, z (per-axis for Vector2/Vector3)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.Processors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.Processors.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.Processors",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.RawInputManager.KeyboardState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.RawInputManager.KeyboardState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.RawInputManager.KeyboardState",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.RawInputManager.KeyboardState.yml\" sourcestartlinenumber=\"1\">Snapshot of keyboard state for a single frame.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.RawInputManager.MouseState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.RawInputManager.MouseState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.RawInputManager.MouseState",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.RawInputManager.MouseState.yml\" sourcestartlinenumber=\"1\">Snapshot of mouse state for a single frame.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.RawInputManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.RawInputManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.RawInputManager",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.RawInputManager.yml\" sourcestartlinenumber=\"1\">Static manager for Windows Raw Input (keyboard and mouse) with background input support.\nProvides direct access to keyboard and mouse input via native Windows API.\nWorks even when Unity window is not focused.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.UnknownCompositeTypeException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.UnknownCompositeTypeException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.UnknownCompositeTypeException",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.UnknownCompositeTypeException.yml\" sourcestartlinenumber=\"1\">Thrown when the composite manager cannot find a composite type matching the binding path.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.VXRActionBinding-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.VXRActionBinding-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.VXRActionBinding<T>",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.VXRActionBinding-1.yml\" sourcestartlinenumber=\"1\">Typed input action binding that automatically registers and unregisters a callback\nwith <xref href=\"Votanic.VXR2.Core.Input.VXRInputManager\" data-throw-if-not-resolved=\"false\"></xref> based on its <xref href=\"Votanic.VXR2.Core.Input.VXRActionBinding.Bound\" data-throw-if-not-resolved=\"false\"></xref> state.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.VXRActionBinding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.VXRActionBinding.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.VXRActionBinding",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.VXRActionBinding.yml\" sourcestartlinenumber=\"1\">Base class for typed action bindings. Holds standard action name constants and the default value type table.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.VXRInputLogger.LogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.VXRInputLogger.LogLevel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.VXRInputLogger.LogLevel",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.VXRInputLogger.LogLevel.yml\" sourcestartlinenumber=\"1\">Severity filter for input-system log messages.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.VXRInputLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.VXRInputLogger.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.VXRInputLogger",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.VXRInputLogger.yml\" sourcestartlinenumber=\"1\">Centralized logging system for VXR Input Manager.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.VXRInputManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.VXRInputManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.VXRInputManager",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.VXRInputManager.yml\" sourcestartlinenumber=\"1\">Input Manager for VXR framework.\nHandles input action mapping, device modules, interactions, processors, and event dispatching.\nSupport 5 input types: bool, axis (a.k.a. float), Vector2, Vector3, Quaternion.\nSupports composite bindings and control schemes.\nRecords action values of current and previous frames for querying.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.ValueType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.ValueType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.ValueType",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.ValueType.yml\" sourcestartlinenumber=\"1\">The data type of an action's input value.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.VirtualKeyCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.VirtualKeyCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.VirtualKeyCode",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.VirtualKeyCode.yml\" sourcestartlinenumber=\"1\">Virtual Key Codes for keyboard and mouse buttons\n<a href=\"https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes\" sourcefile=\"api/Votanic.VXR2.Core.Input.VirtualKeyCode.yml\" sourcestartlinenumber=\"2\">https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.XInputButton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.XInputButton.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.XInputButton",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.XInputButton.yml\" sourcestartlinenumber=\"1\">XInput button flags (can be combined with bitwise OR)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.XInputCapabilityFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.XInputCapabilityFlags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.XInputCapabilityFlags",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.XInputCapabilityFlags.yml\" sourcestartlinenumber=\"1\">XInput controller capability flags</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.XInputDeviceSubtype.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.XInputDeviceSubtype.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.XInputDeviceSubtype",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.XInputDeviceSubtype.yml\" sourcestartlinenumber=\"1\">XInput controller subtype</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.XInputDeviceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.XInputDeviceType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.XInputDeviceType",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.XInputDeviceType.yml\" sourcestartlinenumber=\"1\">XInput controller type</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.XInputError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.XInputError.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.XInputError",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.XInputError.yml\" sourcestartlinenumber=\"1\">XInput error codes</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.XInputManager.ControllerCapabilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.XInputManager.ControllerCapabilities.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.XInputManager.ControllerCapabilities",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.XInputManager.ControllerCapabilities.yml\" sourcestartlinenumber=\"1\">Hardware capability information for a connected controller.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.XInputManager.ControllerState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.XInputManager.ControllerState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.XInputManager.ControllerState",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.XInputManager.ControllerState.yml\" sourcestartlinenumber=\"1\">Input state snapshot for a single controller on a given frame.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.XInputManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.XInputManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.XInputManager",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.XInputManager.yml\" sourcestartlinenumber=\"1\">Static manager for XInput controller access with background input support.\nProvides direct access to Xbox controllers via native Windows XInput API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.XInputThumbstick.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.XInputThumbstick.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.XInputThumbstick",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.XInputThumbstick.yml\" sourcestartlinenumber=\"1\">Thumbstick selection</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.XInputTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.XInputTrigger.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input.XInputTrigger",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Input.XInputTrigger.yml\" sourcestartlinenumber=\"1\">Trigger selection</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Input.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Input.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Input",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.LauncherSupport.VXRLauncherCmdHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.LauncherSupport.VXRLauncherCmdHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.LauncherSupport.VXRLauncherCmdHandler",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.LauncherSupport.VXRLauncherCmdHandler.yml\" sourcestartlinenumber=\"1\">Polls command folders created by VotanicXR Launcher beside the project root each frame.\nRegistered launcher commands invoke their callback; unmapped commands raise <xref href=\"Votanic.VXR2.Core.LauncherSupport.VXRLauncherCmdHandler.OnUnmappedCommand\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.LauncherSupport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.LauncherSupport.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.LauncherSupport",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRBodyGroundPosition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRBodyGroundPosition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Locomotion.VXRBodyGroundPosition",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Locomotion.VXRBodyGroundPosition.yml\" sourcestartlinenumber=\"1\">Positions the XR Origin at a ground-aligned target while compensating for head offset.\nUsed during teleportation to place the body at the destination.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRCameraForwardXZAlignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRCameraForwardXZAlignment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Locomotion.VXRCameraForwardXZAlignment",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Locomotion.VXRCameraForwardXZAlignment.yml\" sourcestartlinenumber=\"1\">Aligns the XR Origin forward direction on the XZ plane relative to the head controller.\nUsed during teleportation to rotate the body around the head.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRHeadProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRHeadProvider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Locomotion.VXRHeadProvider",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Locomotion.VXRHeadProvider.yml\" sourcestartlinenumber=\"1\">Locomotion provider that compensates for horizontal head movement by shifting the XR Origin.\nUsed by <xref href=\"Votanic.VXR2.Core.Player.VXRHeadController\" data-throw-if-not-resolved=\"false\"></xref> to keep the play space stable during head tracking.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRLocomotionWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRLocomotionWrapper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Locomotion.VXRLocomotionWrapper",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Locomotion.VXRLocomotionWrapper.yml\" sourcestartlinenumber=\"1\">Central wrapper that wires vXR2 player controllers to XRI locomotion providers and input bindings.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRMoveProvider.ForwardSelectionMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRMoveProvider.ForwardSelectionMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Locomotion.VXRMoveProvider.ForwardSelectionMode",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Locomotion.VXRMoveProvider.ForwardSelectionMode.yml\" sourcestartlinenumber=\"1\">Defines which source provides the fly forward and right axes.\nHead is used only as the last fallback of <xref href=\"Votanic.VXR2.Core.Locomotion.VXRMoveProvider.ForwardSelectionMode.Auto\" data-throw-if-not-resolved=\"false\"></xref> and is not a user-facing option.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRMoveProvider.MovementDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRMoveProvider.MovementDirection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Locomotion.VXRMoveProvider.MovementDirection",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Locomotion.VXRMoveProvider.MovementDirection.yml\" sourcestartlinenumber=\"1\">Defines which transform the XR Origin's movement direction is relative to.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRMoveProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRMoveProvider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Locomotion.VXRMoveProvider",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Locomotion.VXRMoveProvider.yml\" sourcestartlinenumber=\"1\">Smooth locomotion provider for the vXR2 player.\nMoves the XR Origin from thumbstick input with optional head- or hand-relative direction.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRRecallProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRRecallProvider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Locomotion.VXRRecallProvider",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Locomotion.VXRRecallProvider.yml\" sourcestartlinenumber=\"1\">Locomotion provider that instantly moves the XR Origin to a target transform.\nUsed by <xref href=\"Votanic.VXR2.Core.Player.VXRPlayer.RecallPlayers(Transform)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRRecallTransformation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRRecallTransformation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Locomotion.VXRRecallTransformation",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Locomotion.VXRRecallTransformation.yml\" sourcestartlinenumber=\"1\">Body transformation that snaps the XR Origin to a target transform's position and rotation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRSnapTurnProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRSnapTurnProvider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Locomotion.VXRSnapTurnProvider",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Locomotion.VXRSnapTurnProvider.yml\" sourcestartlinenumber=\"1\">vXR2 snap turn provider based on XRI SnapTurnProvider.\nRotates the rig in fixed left/right increments. Does not support 180° turn-around.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRTeleportationProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRTeleportationProvider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Locomotion.VXRTeleportationProvider",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Locomotion.VXRTeleportationProvider.yml\" sourcestartlinenumber=\"1\">vXR2 teleportation provider that aligns body orientation and position using the head controller,\nand assigns itself to teleport anchors when the Teleport interactor hovers them.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRUpAlignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Locomotion.VXRUpAlignment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Locomotion.VXRUpAlignment",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Locomotion.VXRUpAlignment.yml\" sourcestartlinenumber=\"1\">Aligns the XR Origin up vector using the configured head controller context.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Locomotion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Locomotion.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Locomotion",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Player.VXRHandController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Player.VXRHandController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Player.VXRHandController",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Player.VXRHandController.yml\" sourcestartlinenumber=\"1\">Wrapper of xr hand and controller for vXR2.\nMaybe act as a sample for developer reference.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Player.VXRHandControllerHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Player.VXRHandControllerHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Player.VXRHandControllerHandler",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Player.VXRHandControllerHandler.yml\" sourcestartlinenumber=\"1\">Handler for the vXR2 hand controller.\nThis class is responsible for initializing the hand controller and managing the interactors.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Player.VXRHeadController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Player.VXRHeadController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Player.VXRHeadController",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Player.VXRHeadController.yml\" sourcestartlinenumber=\"1\">Head tracking entity for the vXR2 player.\nApplies tracked head rotation and vertical position, and compensates horizontal drift through <xref href=\"Votanic.VXR2.Core.Locomotion.VXRHeadProvider\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Player.VXRInputEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Player.VXRInputEntity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Player.VXRInputEntity",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Player.VXRInputEntity.yml\" sourcestartlinenumber=\"1\">Tracked entity that exposes select, activate, and UI press/scroll input bindings.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Player.VXRPlayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Player.VXRPlayer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Player.VXRPlayer",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Player.VXRPlayer.yml\" sourcestartlinenumber=\"1\">Player for the vXR2.\nThis class is responsible for initializing the player and managing the entities.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Player.VXRStartPoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Player.VXRStartPoint.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Player.VXRStartPoint",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Player.VXRStartPoint.yml\" sourcestartlinenumber=\"1\">Start point for the vXR2 player.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Player.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Player.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Player",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Rendering.XRScreenCorrectionFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Rendering.XRScreenCorrectionFeature.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Rendering.XRScreenCorrectionFeature",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.Rendering.XRScreenCorrectionFeature.yml\" sourcestartlinenumber=\"1\">URP renderer feature that warps camera output using object-space screen correction.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.Rendering.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.Rendering.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.Rendering",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.VXRCamera.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.VXRCamera.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.VXRCamera",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.VXRCamera.yml\" sourcestartlinenumber=\"1\">Manages XR camera rendering.</p>\n<p sourcefile=\"api/Votanic.VXR2.Core.VXRCamera.yml\" sourcestartlinenumber=\"3\">The camera must be initialized through <xref href=\"Votanic.VXR2.Core.VXRCamera.SetupXRCamera(Transform%2cTransform%2cXRCameraData%2cVotanic.VXR2.Core.VXRScreen%2cViewport%2cRenderTexture%2cRect)\" data-throw-if-not-resolved=\"false\"></xref> and is automatically destroyed\nif instantiated directly without proper initialization.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.VXRHandControllerSetting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.VXRHandControllerSetting.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.VXRHandControllerSetting",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.VXRInteractorSetting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.VXRInteractorSetting.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.VXRInteractorSetting",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.VXRObjectManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.VXRObjectManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.VXRObjectManager",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.VXRObjectManager.yml\" sourcestartlinenumber=\"1\">Creates and tracks XR players, cameras, displays, and entities from the loaded config.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.VXRSDKManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.VXRSDKManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.VXRSDKManager",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.VXRSDKManager.yml\" sourcestartlinenumber=\"1\">Entry point for the vXR2 runtime. Loads config, initializes XR and input, then instantiates XR objects.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.VXRScreen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.VXRScreen.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.VXRScreen",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.VXRScreen.yml\" sourcestartlinenumber=\"1\">Manages screen reference and editor preview.</p>\n<p sourcefile=\"api/Votanic.VXR2.Core.VXRScreen.yml\" sourcestartlinenumber=\"3\">Handles initialization of screen meshes (quad, static mesh, or dome types), world-space canvas rendering,\nand proximity warning visualization. Supports editor preview rendering and tracks nearby entities for\nproximity-based shader effects.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.XRDisplay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.XRDisplay.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core.XRDisplay",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Core.XRDisplay.yml\" sourcestartlinenumber=\"1\">Manages UI related aspect of the displays and viewports.</p>\n<p sourcefile=\"api/Votanic.VXR2.Core.XRDisplay.yml\" sourcestartlinenumber=\"3\">Allows adding UI elements to individual viewports.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Core.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Core",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Entity.IVXRBaseEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Entity.IVXRBaseEntity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Entity.IVXRBaseEntity",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Entity.IVXRBaseEntity.yml\" sourcestartlinenumber=\"1\">Interface for base entity as VXR Object.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Entity.VXRBaseEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Entity.VXRBaseEntity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Entity.VXRBaseEntity",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Entity.VXRBaseEntity.yml\" sourcestartlinenumber=\"1\">Base class for XR entities that manages tracking, positioning, and rotation within the VotanicXR system.</p>\n<p sourcefile=\"api/Votanic.VXR2.Entity.VXRBaseEntity.yml\" sourcestartlinenumber=\"3\">VXRBaseEntity provides core functionality for entities that can be tracked in XR space, including:</p>\n<ul sourcefile=\"api/Votanic.VXR2.Entity.VXRBaseEntity.yml\" sourcestartlinenumber=\"4\">\n<li sourcefile=\"api/Votanic.VXR2.Entity.VXRBaseEntity.yml\" sourcestartlinenumber=\"4\">Tracking state management (IsTracking, Position, Rotation)</li>\n<li sourcefile=\"api/Votanic.VXR2.Entity.VXRBaseEntity.yml\" sourcestartlinenumber=\"5\">Input binding through action bindings</li>\n<li sourcefile=\"api/Votanic.VXR2.Entity.VXRBaseEntity.yml\" sourcestartlinenumber=\"6\">Lost tracking behavior handling (Stay, Default, CustomLocation)</li>\n<li sourcefile=\"api/Votanic.VXR2.Entity.VXRBaseEntity.yml\" sourcestartlinenumber=\"7\">Entity lifecycle management (Awake, Enable, Disable, Destroy)</li>\n<li sourcefile=\"api/Votanic.VXR2.Entity.VXRBaseEntity.yml\" sourcestartlinenumber=\"8\">Centralized entity registry for bulk updates</li>\n</ul>\n<p sourcefile=\"api/Votanic.VXR2.Entity.VXRBaseEntity.yml\" sourcestartlinenumber=\"10\">Derived classes should override Setup() to customize initialization and the input action event methods\n(IsTrackedInputActionEvent, PositionInputActionEvent, RotationInputActionEvent) to handle specific tracking data.</p>\n<p sourcefile=\"api/Votanic.VXR2.Entity.VXRBaseEntity.yml\" sourcestartlinenumber=\"13\">The entity maintains both raw tracking data and applies transformations based on the current tracking mode\nand lost tracking configuration from entityData.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Entity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Entity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Entity",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Haptics.VXRHapticManager.HapticStrength.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Haptics.VXRHapticManager.HapticStrength.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Haptics.VXRHapticManager.HapticStrength",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Haptics.VXRHapticManager.HapticStrength.yml\" sourcestartlinenumber=\"1\">Preset haptic intensities for gamepad and VR controller rumble.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Haptics.VXRHapticManager.VRHapticHand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Haptics.VXRHapticManager.VRHapticHand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Haptics.VXRHapticManager.VRHapticHand",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Haptics.VXRHapticManager.VRHapticHand.yml\" sourcestartlinenumber=\"1\">Which VR controller hand(s) should receive haptic output.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Haptics.VXRHapticManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Haptics.VXRHapticManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Haptics.VXRHapticManager",
+      "Summary": "<p sourcefile=\"api/Votanic.VXR2.Haptics.VXRHapticManager.yml\" sourcestartlinenumber=\"1\">Manages haptic feedback for common controllers used by VXR Input Manager. <br>\nSupport xInput gamepads and VR controllers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Votanic.VXR2.Haptics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Votanic.VXR2.Haptics.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Votanic.VXR2.Haptics",
+      "Summary": null
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "faq/faq-content.md",
+      "output": {
+        ".html": {
+          "relative_path": "faq/faq-content.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "faq/images/select-config-control-scheme.png",
+      "output": {
+        "resource": {
+          "relative_path": "faq/images/select-config-control-scheme.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "faq/images/select-hmd-config.png",
+      "output": {
+        "resource": {
+          "relative_path": "faq/images/select-hmd-config.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "faq/images/select-hmd-control-scheme.png",
+      "output": {
+        "resource": {
+          "relative_path": "faq/images/select-hmd-control-scheme.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "faq/images/turn-off-no-cameras-warning.png",
+      "output": {
+        "resource": {
+          "relative_path": "faq/images/turn-off-no-cameras-warning.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "faq/images/unity-vxr2-select-config.png",
+      "output": {
+        "resource": {
+          "relative_path": "faq/images/unity-vxr2-select-config.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "review-comments.md",
+      "output": {
+        ".html": {
+          "relative_path": "review-comments.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/fader/fader-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/fader/fader-overview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/fader/fader-overview/fader-sample.gif",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/fader/fader-overview/fader-sample.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/fader/fader-overview/vxr-sdk-manager.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/fader/fader-overview/vxr-sdk-manager.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/fader/fader-overview/vxr-world-fader-renderers.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/fader/fader-overview/vxr-world-fader-renderers.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/input-system/input-action-map-editor/unity-action-map-editor.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/input-system/input-action-map-editor/unity-action-map-editor.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-active-control-scheme.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-active-control-scheme.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-add-composite-bindings.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-add-composite-bindings.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-add-control-scheme.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-add-control-scheme.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-binding-properties.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-binding-properties.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-change-control-scheme.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-change-control-scheme.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-composite-binding-properties.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-composite-binding-properties.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-composite-bindings.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-composite-bindings.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-configure-action-map.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-configure-action-map.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-configure-actions.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-configure-actions.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-configure-bindings.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-configure-bindings.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-delete-control-scheme.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-delete-control-scheme.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-edit-action-properties.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-editor-edit-action-properties.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-file-path.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-action-map-file-path.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-manager.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-input-manager.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-sdk-manager.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/input-system/input-action-map-editor/vxr-sdk-manager.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/input-system/link-action-to-method/vxr-link-action-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/input-system/link-action-to-method/vxr-link-action-example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/interaction/interactor-setting/create-interactor-setting.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/interaction/interactor-setting/create-interactor-setting.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/interaction/interactor-setting/hand-controller-setting.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/interaction/interactor-setting/hand-controller-setting.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/interaction/interactor-setting/interactor-setting.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/interaction/interactor-setting/interactor-setting.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/interaction/interactor-setting/select-setting-in-vxr-object-manager.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/interaction/interactor-setting/select-setting-in-vxr-object-manager.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/interaction/interactor-setting/select-vxr-object-manager.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/interaction/interactor-setting/select-vxr-object-manager.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/interaction/interactors/default-interactors.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/interaction/interactors/default-interactors.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/interaction/interactors/interactor-grab-sample.gif",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/interaction/interactors/interactor-grab-sample.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/interaction/interactors/interactor-poke-sample.gif",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/interaction/interactors/interactor-poke-sample.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/interaction/interactors/interactor-teleport-sample.gif",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/interaction/interactors/interactor-teleport-sample.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/locomotion/default-locomotion-providers/default-locomotion-providers.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/locomotion/default-locomotion-providers/default-locomotion-providers.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/locomotion/gravity-locomotion-special-behavior-when-flying/vxr-flying-gravity-on.gif",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/locomotion/gravity-locomotion-special-behavior-when-flying/vxr-flying-gravity-on.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/select-unity-version.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/select-unity-version.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/select-urp3d.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/select-urp3d.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-import-custom-package.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-import-custom-package.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-import-package-dialog.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-import-package-dialog.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-install-packages-with-git-url.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-install-packages-with-git-url.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-install-packages.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-install-packages.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-package-manager.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-package-manager.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-project-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-project-settings.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-tick-openxr-setting.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-tick-openxr-setting.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-unsafe-code.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-unsafe-code.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-vxr2-project-setting-buttons.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-vxr2-project-setting-buttons.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-vxr2-project-setting.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-vxr2-project-setting.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-vxr2-project-setting.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-vxr2-project-setting.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-vxr2-select-config-action-map.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-vxr2-select-config-action-map.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-vxr2-select-config.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-vxr2-select-config.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-vxr2-spawn-things-result.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-vxr2-spawn-things-result.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-vxr2-spawn-things.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-vxr2-spawn-things.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-vxr2-streaming-assets.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-vxr2-streaming-assets.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-xr-plugin-management.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-xr-plugin-management.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/votanic-suite-import-sdk.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/votanic-suite-import-sdk.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/votanic-suite-license-manager-enter-key.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/votanic-suite-license-manager-enter-key.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/votanic-suite-license-manager-select-activate.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/votanic-suite-license-manager-select-activate.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/votanic-suite-license-manager.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/votanic-suite-license-manager.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/input-system/default-inputs.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/input-system/default-inputs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/input-system/input-action-map-editor.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/input-system/input-action-map-editor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/input-system/input-system-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/input-system/input-system-overview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/input-system/link-action-to-method.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/input-system/link-action-to-method.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/interaction/default-interactors.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/interaction/default-interactors.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/interaction/interactables.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/interaction/interactables.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/interaction/interaction-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/interaction/interaction-overview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/interaction/interactor-setting.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/interaction/interactor-setting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/interaction/using-interactors.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/interaction/using-interactors.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/locomotion/default-locomotion-providers.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/locomotion/default-locomotion-providers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/locomotion/locomotion-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/locomotion/locomotion-overview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/locomotion/using-locomotion-providers.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/locomotion/using-locomotion-providers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/project-setup/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/project-setup/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/project-setup/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/project-setup/overview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/samples/sample-scenes.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/samples/sample-scenes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/toc.html"
+        },
+        ".json": {
+          "relative_path": "tutorials/toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
