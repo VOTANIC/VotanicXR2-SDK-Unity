@@ -1,6 +1,6 @@
 {
   "docfx_version": "2.81.0+ba844df625370a6bd7c1ecab0d0ec4d1d9128ac4",
-  "source_base_path": "C:/Users/PC/Project/VotanicXR2_Tutorial_Documentation_Source",
+  "source_base_path": "/home/runner/work/VotanicXR2_Tutorial_Documentation_Source/VotanicXR2_Tutorial_Documentation_Source",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -2144,16 +2144,6 @@
       "output": {
         ".html": {
           "relative_path": "index.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "review-comments.md",
-      "output": {
-        ".html": {
-          "relative_path": "review-comments.html"
         }
       },
       "version": ""
