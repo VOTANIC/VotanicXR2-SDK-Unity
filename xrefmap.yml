@@ -11060,6 +11060,9 @@ references:
 - uid: interaction-overview
   name: Interaction Framework Overview
   href: tutorials/interaction/interaction-overview.html
+- uid: license-limitations
+  name: License Limitations
+  href: tutorials/project-setup/license-limitations.html
 - uid: link-action-to-method
   name: Linking actions to in-code methods
   href: tutorials/input-system/link-action-to-method.html
