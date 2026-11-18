@@ -177,7 +177,7 @@ The VotanicXR2 SDK is distributed as a `.unitypackage` and is available through 
 <li>Creating a new scene and manually add in the required components</li>
 </ul>
 <h3 id="start-with-a-sample-scene">Start with a sample scene</h3>
-<p>To set up a proper VXR2 scene, go into or duplicate one of the <a href="../samples/sample-scenes.html">sample scenes</a> and modify them to suit your project need.</p>
+<p>To set up a proper VXR2 scene, you can <a href="../samples/sample-scenes.html#download-the-sample-scene">download the sample scenes</a> and modify them to suit your project need.</p>
 <h3 id="start-with-a-new-scene">Start with a new scene</h3>
 <p>To set up a proper VXR2 scene using a new scene, do the followings:</p>
 <ol>
@@ -194,9 +194,9 @@ The VotanicXR2 SDK is distributed as a `.unitypackage` and is available through 
 <hr>
 <h2 id="set-up-project-config-and-action-map">Set up project config and action map</h2>
 <ol>
-<li><p>Download the default <code>.vxr2</code> project config and <code>.json</code> action map from <a href="https://github.com/VOTANIC/VotanicXR2-SDK-Unity/tree/main/Default_Resources">default resources folder</a> on SDK github page.</p>
+<li><p>Download the default <code>.vxrc2</code> project config and <code>.json</code> action map from <a href="https://github.com/VOTANIC/VotanicXR2-SDK-Unity/tree/main/Default_Resources">default resources folder</a> on SDK github page.</p>
 </li>
-<li><p>Place the <code>.vxr2</code> config files under <code>StreamingAssets</code> folder and <code>.json</code> action map under <code>StreamingAssets &gt; InputActionMaps</code> folder in the project hierarchy.</p>
+<li><p>Place the <code>.vxrc2</code> config files under <code>StreamingAssets</code> folder and <code>.json</code> action map under <code>StreamingAssets &gt; InputActionMaps</code> folder in the project hierarchy.</p>
 </li>
 </ol>
 <!-- 2. Place the downloaded files under `StreamingAssets` folder in the project hierarchy. -->
@@ -220,12 +220,18 @@ The VotanicXR2 SDK is distributed as a `.unitypackage` and is available through 
 </ol>
 <p><img src="../images/project-setup/getting-started/unity-project-settings.png" alt=""></p>
 <ol start="2">
-<li>Select <code>Votanic &gt; VXR2</code> category.</li>
+<li>Go to <code>Votanic &gt; VXR2</code> category.</li>
 </ol>
 <p><img src="../images/project-setup/getting-started/unity-vxr2-project-setting.png" alt=""></p>
 <ol start="3">
-<li>Click on both <strong>Use Votanic VXR2 Render Pipeline Asset</strong> and <strong>Disable DXGI</strong> to apply the settings.</li>
+<li>Click the following buttons so the SDK has the settings it needs:</li>
 </ol>
+<ul>
+<li><strong>Use Votanic VXR2 Render Pipeline Asset</strong></li>
+<li><strong>Disable DXGI</strong></li>
+<li><strong>Apply VXR2 Layers</strong></li>
+<li><strong>Generate Default Action Map</strong></li>
+</ul>
 <p><img src="../images/project-setup/getting-started/unity-vxr2-project-setting-buttons.png" alt=""></p>
 <ol start="4">
 <li>Navigate to <code>XR Plug-in Management</code>.</li>
@@ -235,6 +241,18 @@ The VotanicXR2 SDK is distributed as a `.unitypackage` and is available through 
 <li>Tick <code>OpenXR</code> checkbox.</li>
 </ol>
 <p><img src="../images/project-setup/getting-started/unity-tick-openxr-setting.png" alt=""></p>
+<ol start="6">
+<li>Navigate to <code>XR Plug-in Management &gt; OpenXR</code>.</li>
+</ol>
+<p><img src="../images/project-setup/getting-started/unity-open-xr.png" alt=""></p>
+<ol start="7">
+<li>Set Render Mode to <strong>Multi-pass</strong> and enable the interaction profiles that you use for testing under Enabled Interaction Profiles.</li>
+</ol>
+<p><img src="../images/project-setup/getting-started/unity-open-xr-settings.png" alt=""></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>To change the path of action map and config file in your project, see <a href="../temp/project-setting.html">Project Setting</a>.</p>
+</div>
 <!-- ### Enable unsafe code
 
 1. In the search bar at the top-right of the Project Settings window, type **"unsafe"**. This will instantly filter the relevant section under the **Player** category.

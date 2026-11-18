@@ -2373,6 +2373,66 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "tutorials/images/interaction/interactables/create-basic-interactable/create-basic-interactable-result.gif",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/interaction/interactables/create-basic-interactable/create-basic-interactable-result.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/interaction/interactables/create-basic-interactable/create-cube.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/interaction/interactables/create-basic-interactable/create-cube.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/interaction/interactables/create-interactable-ui/add-tracked-device-graphic-raycaster.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/interaction/interactables/create-interactable-ui/add-tracked-device-graphic-raycaster.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/interaction/interactables/create-interactable-ui/create-interactable-ui-result.gif",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/interaction/interactables/create-interactable-ui/create-interactable-ui-result.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/interaction/interactables/create-interactable-ui/create-ui.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/interaction/interactables/create-interactable-ui/create-ui.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/interaction/interactables/create-interactable-ui/set-canvas-to-world-space.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/interaction/interactables/create-interactable-ui/set-canvas-to-world-space.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "tutorials/images/interaction/interactor-setting/create-interactor-setting.png",
       "output": {
         "resource": {
@@ -2537,6 +2597,26 @@
       "output": {
         "resource": {
           "relative_path": "tutorials/images/project-setup/getting-started/unity-install-packages.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-open-xr-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-open-xr-settings.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/project-setup/getting-started/unity-open-xr.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/project-setup/getting-started/unity-open-xr.png"
         }
       },
       "version": ""
@@ -2712,6 +2792,76 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/sample/download-sample-scene-find-package.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/sample/download-sample-scene-find-package.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/sample/download-sample-scene-import.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/sample/download-sample-scene-import.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/sample/download-sample-scene-tab.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/sample/download-sample-scene-tab.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/temp/project-setting-layers.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/temp/project-setting-layers.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/temp/project-setting-section1.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/temp/project-setting-section1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/temp/project-setting-section2.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/temp/project-setting-section2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "tutorials/images/temp/project-setting-section3.png",
+      "output": {
+        "resource": {
+          "relative_path": "tutorials/images/temp/project-setting-section3.png"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "tutorials/input-system/default-inputs.md",
       "output": {
@@ -2747,6 +2897,26 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/input-system/link-action-to-method.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/interaction/create-basic-interactable.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/interaction/create-basic-interactable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/interaction/create-interactable-ui.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/interaction/create-interactable-ui.html"
         }
       },
       "version": ""
@@ -2867,6 +3037,16 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/samples/sample-scenes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/temp/project-setting.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/temp/project-setting.html"
         }
       },
       "version": ""

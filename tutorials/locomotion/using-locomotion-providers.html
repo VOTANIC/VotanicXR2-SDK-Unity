@@ -122,61 +122,35 @@
 </tr>
 </tbody>
 </table>
-<!---
-This feature is not included in SDK MVP:
-Set input source mode of interactors then call QueueManualState to manually trigger an interaction
--->
-<h2 id="code-example-press-button-to-toggle-locomotion-providers">Code example: Press button to toggle locomotion providers</h2>
-<p>This example demonstrates how to implement toggling the locomotion providers when you press a button.</p>
+<h2 id="code-example-toggle-locomotion-providers">Code example: Toggle locomotion providers</h2>
+<p>This example demonstrates how to implement toggling the locomotion providers.</p>
 <pre><code class="lang-csharp">using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Locomotion;
-using Votanic.VXR2.Core.Input;
-using Votanic.VXR2.Core.Locomotion;
 using Votanic.VXR2.Core;
+using Votanic.VXR2.Core.Player;
+using Votanic.VXR2.Core.Locomotion;
 
 public class SampleLocomotionController : MonoBehaviour
 {
-    private readonly string triggerActionName = &quot;NextLocomotionProvider&quot;;
-
-    private VXRActionBinding&lt;bool&gt; _buttonAction;
-    private List&lt;LocomotionProvider&gt; locomotionProviders;
     private bool enableLocomotion = true;
     private VXRLocomotionWrapper locomotionWrapper;
+    private List&lt;LocomotionProvider&gt; locomotionProviders;
 
     IEnumerator Start()
     {
         yield return new WaitUntil(() =&gt; VXRObjectManager.Instance.Initialized);
-        _buttonAction = new VXRActionBinding&lt;bool&gt;(triggerActionName, ButtonAction);
 
         // Access locomotion wrapper of current player
-        locomotionWrapper = VXRPlayer.Players.First().LocomotionWrapper;
+        locomotionWrapper = VXRPlayer.Players.First().GetComponent&lt;VXRLocomotionWrapper&gt;();
 
         // Get all locomotion providers from locomotion wrapper
         locomotionProviders = locomotionWrapper.GetLocomotionProviders.ToList();
     }
 
-    private void OnEnable()
-    {
-        if (_buttonAction != null) _buttonAction.Bound = true;
-    }
-    private void OnDisable()
-    {
-        if (_buttonAction != null) _buttonAction.Bound = false;
-    }
-    private void OnDestroy()
-    {
-        if (_buttonAction != null) _buttonAction.Dispose();
-    }
-
-    private void ButtonAction(bool value)
-    {
-        if (value) ToggleLocomotionProviders();
-    }
-
-    private void ToggleLocomotionProviders()
+    public void ToggleLocomotionProviders()
     {
         enableLocomotion = !enableLocomotion;
         

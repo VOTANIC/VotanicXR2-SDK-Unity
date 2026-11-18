@@ -11030,6 +11030,12 @@ references:
 - uid: configure-interactor-setting
   name: Configure interactor setting
   href: tutorials/interaction/interactor-setting.html
+- uid: create-basic-interactable
+  name: Create basic interactable
+  href: tutorials/interaction/create-basic-interactable.html
+- uid: create-interactable-ui
+  name: Create interactable UI
+  href: tutorials/interaction/create-interactable-ui.html
 - uid: default-inputs
   name: Default Inputs
   href: tutorials/input-system/default-inputs.html
@@ -11072,6 +11078,9 @@ references:
 - uid: overview
   name: Overview
   href: tutorials/project-setup/overview.html
+- uid: project-setting
+  name: Project Setting
+  href: tutorials/temp/project-setting.html
 - uid: sample-scenes
   name: Sample Scenes
   href: tutorials/samples/sample-scenes.html

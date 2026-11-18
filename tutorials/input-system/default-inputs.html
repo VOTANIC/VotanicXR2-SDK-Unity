@@ -85,7 +85,7 @@
         </div>
 
         <article data-uid="default-inputs">
-<h1 id="default-input-mappings">Default input mappings</h1>
+<h1 id="default-input-action-map">Default input action map</h1>
 
 <p>This page describes the default input action map used by VotanicXR2 projects (from <a href="https://github.com/VOTANIC/VotanicXR2-SDK-Unity/tree/main/Default_Resources">default resources folder</a> on SDK github page). The action map contain the following control schemes: <strong>PC</strong>, <strong>HMD</strong>, <strong>CAVE</strong>.</p>
 <hr>
@@ -277,6 +277,137 @@
 </table>
 </section>
 </div>
+<h2 id="reserved-action-names">Reserved Action Names</h2>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>These action names are reserved for the default action map. Do not reuse them as an action name in the Action Map Editor, or as the string passed to <code>VXRActionBinding&lt;T&gt;</code>. The input system matches action names by the exact string, so a custom action or binding that reuses one of these names shares callbacks with the built-in action.</p>
+</div>
+<p>The reserved strings below are the action names stored in the default action map. It is advised to prefix your own actions so the name cannot collide with a reserved name:</p>
+<pre><code class="lang-csharp">private readonly string actionName = &quot;Movement&quot;; // Collide with reserved name
+private readonly string actionName = &quot;Car_Movement&quot;; // Add prefix, so it doesn't collide with reserved name
+</code></pre>
+<h3 id="locomotion-3">Locomotion</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Action name</th>
+<th style="text-align: left;">C# type</th>
+<th style="text-align: left;">Already used for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Movement</code></td>
+<td style="text-align: left;"><code>Vector2</code></td>
+<td style="text-align: left;">Move</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Vertical</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;">Fly up / down</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Turn</code></td>
+<td style="text-align: left;"><code>Vector2</code></td>
+<td style="text-align: left;">Smooth turn</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SnapTurn</code></td>
+<td style="text-align: left;"><code>Vector2</code></td>
+<td style="text-align: left;">Snap turn</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>LeftGrabMove</code></td>
+<td style="text-align: left;"><code>bool</code></td>
+<td style="text-align: left;">Left grab-move binding in the default map</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>RightGrabMove</code></td>
+<td style="text-align: left;"><code>bool</code></td>
+<td style="text-align: left;">Right grab-move binding in the default map</td>
+</tr>
+</tbody>
+</table>
+<h3 id="menu">Menu</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Action name</th>
+<th style="text-align: left;">C# type</th>
+<th style="text-align: left;">Already used for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Menu</code></td>
+<td style="text-align: left;"><code>bool</code></td>
+<td style="text-align: left;">Menu button</td>
+</tr>
+</tbody>
+</table>
+<h3 id="head-left-hand-and-right-hand">Head, left hand, and right hand</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Action name</th>
+<th style="text-align: left;">C# type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>HeadIsTracked</code></td>
+<td style="text-align: left;"><code>bool</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>HeadPosition</code></td>
+<td style="text-align: left;"><code>Vector3</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>HeadRotation</code></td>
+<td style="text-align: left;"><code>Quaternion</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>LeftHandIsTracked</code></td>
+<td style="text-align: left;"><code>bool</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>LeftHandPosition</code></td>
+<td style="text-align: left;"><code>Vector3</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>LeftHandRotation</code></td>
+<td style="text-align: left;"><code>Quaternion</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>LeftHandSelect</code></td>
+<td style="text-align: left;"><code>bool</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>LeftHandUIPress</code></td>
+<td style="text-align: left;"><code>bool</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>RightHandIsTracked</code></td>
+<td style="text-align: left;"><code>bool</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>RightHandPosition</code></td>
+<td style="text-align: left;"><code>Vector3</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>RightHandRotation</code></td>
+<td style="text-align: left;"><code>Quaternion</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>RightHandSelect</code></td>
+<td style="text-align: left;"><code>bool</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>RightHandUIPress</code></td>
+<td style="text-align: left;"><code>bool</code></td>
+</tr>
+</tbody>
+</table>
 
 </article>
 
