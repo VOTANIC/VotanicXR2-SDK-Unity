@@ -2493,30 +2493,30 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "tutorials/images/interaction/interactors/interactor-grab-sample.gif",
+      "source_relative_path": "tutorials/images/interaction/interactors/near-far-interactor.gif",
       "output": {
         "resource": {
-          "relative_path": "tutorials/images/interaction/interactors/interactor-grab-sample.gif"
+          "relative_path": "tutorials/images/interaction/interactors/near-far-interactor.gif"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "tutorials/images/interaction/interactors/interactor-poke-sample.gif",
+      "source_relative_path": "tutorials/images/interaction/interactors/poke-interactor.gif",
       "output": {
         "resource": {
-          "relative_path": "tutorials/images/interaction/interactors/interactor-poke-sample.gif"
+          "relative_path": "tutorials/images/interaction/interactors/poke-interactor.gif"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "tutorials/images/interaction/interactors/interactor-teleport-sample.gif",
+      "source_relative_path": "tutorials/images/interaction/interactors/teleport-interactor.gif",
       "output": {
         "resource": {
-          "relative_path": "tutorials/images/interaction/interactors/interactor-teleport-sample.gif"
+          "relative_path": "tutorials/images/interaction/interactors/teleport-interactor.gif"
         }
       },
       "version": ""
